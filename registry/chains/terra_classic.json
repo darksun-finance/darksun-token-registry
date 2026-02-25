@@ -82,7 +82,7 @@
       "id": "terra_classic/native/uaut",
       "chain": "terra_classic",
       "type": "native",
-      "symbol": "UAUT",
+      "symbol": "AUTC",
       "name": "TerraClassicAUT",
       "denom": "uaut",
       "decimals": 6,
@@ -116,14 +116,14 @@
       "tags": ["native", "stablecoin"]
     },
     {
-      "id": "terra_classic/native/ueut",
+      "id": "terra_classic/native/ueur",
       "chain": "terra_classic",
       "type": "native",
-      "symbol": "UEUT",
-      "name": "TerraClassicEUT",
+      "symbol": "EUTC",
+      "name": "TerraClassicEUR",
       "denom": "uaut",
       "decimals": 6,
-      "logoURI": "tokens/terra-classic/ueut.svg",
+      "logoURI": "tokens/terra-classic/ueur.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
       "priceSources": [
@@ -141,7 +141,7 @@
         },
         {
           "provider": "vyntrex",
-          "contract": "ueut",
+          "contract": "ueur",
           "api": "https://api.vyntrex.io",
           "priority": 3,
           "enabled": true
