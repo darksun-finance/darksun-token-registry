@@ -171,6 +171,23 @@
       "description": "",
       "verified": true,
       "tags": ["ibc", "token"]
+    },
+    {
+      "id": "terra_classic/ibc/EB2CED20AB0466F18BE49285E56B31306D4C60438A022EA995BA65D5E3CF7E09",
+      "chain": "terra_classic",
+      "type": "ibc",
+      "symbol": "SCRT",
+      "name": "Secret",
+      "denom": "ibc/EB2CED20AB0466F18BE49285E56B31306D4C60438A022EA995BA65D5E3CF7E09",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ibc-EB2CED20AB0466F18BE49285E56B31306D4C60438A022EA995BA65D5E3CF7E09.svg",
+      "coinmarketcapId": "5604",
+      "coingeckoId": "secret",
+      "vyntrexContract": "ibc/EB2CED20AB0466F18BE49285E56B31306D4C60438A022EA995BA65D5E3CF7E09",
+      "website": "https://scrt.network",
+      "description": "",
+      "verified": true,
+      "tags": ["ibc", "token"]
     }
   ]
 }
