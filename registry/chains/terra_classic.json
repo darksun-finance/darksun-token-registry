@@ -49,7 +49,7 @@
       "name": "TerraClassicUSD",
       "denom": "uusd",
       "decimals": 6,
-      "logoURI": "tokens/terra-classic/uusd.png",
+      "logoURI": "tokens/terra-classic/uusd.svg",
       "coinmarketcapId": "7129",
       "coingeckoId": "terrausd",
       "priceSources": [
@@ -67,7 +67,44 @@
         },
         {
           "provider": "vyntrex",
-          "contract": "terra1...",
+          "contract": "uusd",
+          "api": "https://api.vyntrex.io",
+          "priority": 3,
+          "enabled": true
+        }
+      ],
+      "website": "https://terra-classic.io",
+      "description": "Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
+      "id": "terra_classic/native/uaut",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "UAUT",
+      "name": "TerraClassicAUT",
+      "denom": "uaut",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/uaut.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "priceSources": [
+        {
+          "provider": "coinmarketcap",
+          "id": "",
+          "priority": 1,
+          "enabled": false
+        },
+        {
+          "provider": "coingecko",
+          "id": "",
+          "priority": 2,
+          "enabled": false
+        },
+        {
+          "provider": "vyntrex",
+          "contract": "uaut",
           "api": "https://api.vyntrex.io",
           "priority": 3,
           "enabled": true
