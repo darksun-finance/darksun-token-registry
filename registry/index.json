@@ -1,0 +1,11 @@
+{
+  "name": "DarkSun Token Registry",
+  "timestamp": "2026-02-25T00:00:00Z",
+  "chains": [
+    {
+      "key": "terra_classic",
+      "name": "Terra Classic",
+      "file": "registry/chains/terra_classic.json"
+    }
+  ]
+}

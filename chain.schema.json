@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://darksun.finance/schemas/chain.schema.json",
+  "title": "DarkSun Chain Token List",
+  "type": "object",
+  "required": ["chain", "name", "timestamp", "tokens"],
+  "properties": {
+    "chain": { "type": "string" },
+    "name": { "type": "string" },
+    "timestamp": { "type": "string" },
+    "tokens": {
+      "type": "array",
+      "items": { "$ref": "./token.schema.json" }
+    }
+  },
+  "additionalProperties": false
+}

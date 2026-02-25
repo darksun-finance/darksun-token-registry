@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-label="LUNC">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#2a1e67"/>
+      <stop offset="100%" stop-color="#0f1032"/>
+    </radialGradient>
+  </defs>
+  <circle cx="64" cy="64" r="62" fill="url(#bg)"/>
+  <circle cx="64" cy="64" r="36" fill="#f3de3b"/>
+  <path d="M38 60c13-17 37-18 54-4-16-3-30 2-42 18-4-4-8-9-12-14z" fill="#251f5f"/>
+</svg>
