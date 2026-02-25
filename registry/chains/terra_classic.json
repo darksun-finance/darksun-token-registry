@@ -11,7 +11,7 @@
       "name": "Terra Luna Classic",
       "denom": "uluna",
       "decimals": 6,
-      "logoURI": "assets/tokens/lunc.svg",
+      "logoURI": "tokens/terra-classic/lunc.svg",
       "coinmarketcapId": "4172",
       "coingeckoId": "terra-luna",
       "priceSources": [
@@ -49,7 +49,7 @@
       "name": "TerraClassicUSD",
       "denom": "uusd",
       "decimals": 6,
-      "logoURI": "assets/tokens/ustc.svg",
+      "logoURI": "tokens/terra-classic/ustc.svg",
       "coinmarketcapId": "7129",
       "coingeckoId": "terrausd",
       "priceSources": [
