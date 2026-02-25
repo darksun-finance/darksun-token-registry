@@ -116,6 +116,43 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/ueut",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "UEUT",
+      "name": "TerraClassicEUT",
+      "denom": "uaut",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ueut.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "priceSources": [
+        {
+          "provider": "coinmarketcap",
+          "id": "",
+          "priority": 1,
+          "enabled": false
+        },
+        {
+          "provider": "coingecko",
+          "id": "",
+          "priority": 2,
+          "enabled": false
+        },
+        {
+          "provider": "vyntrex",
+          "contract": "ueut",
+          "api": "https://api.vyntrex.io",
+          "priority": 3,
+          "enabled": true
+        }
+      ],
+      "website": "https://terra-classic.io",
+      "description": "Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "chain": "terra_classic",
       "type": "cw20",
