@@ -213,6 +213,43 @@
       "description": "Terra Classic Community token.",
       "verified": true,
       "tags": ["cw20", "token"]
+    },
+    {
+      "id": "terra_classic/ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+      "chain": "terra_classic",
+      "type": "ibc",
+      "symbol": "OSMO",
+      "name": "Osmosis",
+      "contract": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ibc-0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B.svg",
+      "coinmarketcapId": "12220",
+      "coingeckoId": "osmosis",
+      "priceSources": [
+        {
+          "provider": "coinmarketcap",
+          "id": "12220",
+          "priority": 1,
+          "enabled": true
+        },
+        {
+          "provider": "coingecko",
+          "id": "osmosis",
+          "priority": 2,
+          "enabled": true
+        },
+        {
+          "provider": "vyntrex",
+          "contract": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+          "api": "https://api.vyntrex.io",
+          "priority": 1,
+          "enabled": true
+        }
+      ],
+      "website": "https://www.lunctoken.org",
+      "description": "Terra Classic Community token.",
+      "verified": true,
+      "tags": ["cw20", "token"]
     }
   ]
 }
