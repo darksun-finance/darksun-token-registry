@@ -14,27 +14,6 @@
       "logoURI": "tokens/terra-classic/uluna.svg",
       "coinmarketcapId": "4172",
       "coingeckoId": "terra-luna",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "4172",
-          "priority": 1,
-          "enabled": true
-        },
-        {
-          "provider": "coingecko",
-          "id": "terra-luna",
-          "priority": 2,
-          "enabled": true
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "terra1...",
-          "api": "https://api.vyntrex.io",
-          "priority": 3,
-          "enabled": true
-        }
-      ],
       "website": "https://terra-classic.io",
       "x": "https://x.com/terra_money",
       "description": "Native staking and fee token of Terra Classic.",
@@ -46,33 +25,12 @@
       "chain": "terra_classic",
       "type": "native",
       "symbol": "USTC",
-      "name": "TerraClassicUSD",
+      "name": "Terra Classic USD",
       "denom": "uusd",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/uusd.svg",
       "coinmarketcapId": "7129",
       "coingeckoId": "terrausd",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "7129",
-          "priority": 1,
-          "enabled": true
-        },
-        {
-          "provider": "coingecko",
-          "id": "terrausd",
-          "priority": 2,
-          "enabled": true
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "uusd",
-          "api": "https://api.vyntrex.io",
-          "priority": 3,
-          "enabled": true
-        }
-      ],
       "website": "https://terra-classic.io",
       "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
@@ -83,33 +41,13 @@
       "chain": "terra_classic",
       "type": "native",
       "symbol": "AUTC",
-      "name": "TerraClassicAUT",
+      "name": "Terra Classic AUT",
       "denom": "uaut",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/uaut.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "",
-          "priority": 1,
-          "enabled": false
-        },
-        {
-          "provider": "coingecko",
-          "id": "",
-          "priority": 2,
-          "enabled": false
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "uaut",
-          "api": "https://api.vyntrex.io",
-          "priority": 3,
-          "enabled": true
-        }
-      ],
+      "vyntrexContract": "uaut",
       "website": "https://terra-classic.io",
       "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
@@ -120,33 +58,13 @@
       "chain": "terra_classic",
       "type": "native",
       "symbol": "EUTC",
-      "name": "TerraClassicEUR",
-      "denom": "uaut",
+      "name": "Terra Classic EUR",
+      "denom": "ueur",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/ueur.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "",
-          "priority": 1,
-          "enabled": false
-        },
-        {
-          "provider": "coingecko",
-          "id": "",
-          "priority": 2,
-          "enabled": false
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "ueur",
-          "api": "https://api.vyntrex.io",
-          "priority": 3,
-          "enabled": true
-        }
-      ],
+      "vyntrexContract": "ueur",
       "website": "https://terra-classic.io",
       "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
@@ -157,33 +75,13 @@
       "chain": "terra_classic",
       "type": "native",
       "symbol": "GBTC",
-      "name": "TerraClassicGBP",
+      "name": "Terra Classic GBP",
       "denom": "ugbp",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/ugbt.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "",
-          "priority": 1,
-          "enabled": false
-        },
-        {
-          "provider": "coingecko",
-          "id": "",
-          "priority": 2,
-          "enabled": false
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "ugbp",
-          "api": "https://api.vyntrex.io",
-          "priority": 3,
-          "enabled": true
-        }
-      ],
+      "vyntrexContract": "ugbp",
       "website": "https://terra-classic.io",
       "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
@@ -200,15 +98,7 @@
       "logoURI": "tokens/terra-classic/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a.png",
       "coinmarketcapId": "",
       "coingeckoId": "",
-      "priceSources": [
-        {
-          "provider": "vyntrex",
-          "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
-          "api": "https://api.vyntrex.io",
-          "priority": 1,
-          "enabled": true
-        }
-      ],
+      "vyntrexContract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "website": "https://www.lunctoken.org",
       "description": "Terra Classic Community token.",
       "verified": true,
@@ -225,27 +115,7 @@
       "logoURI": "tokens/terra-classic/ibc-0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B.svg",
       "coinmarketcapId": "12220",
       "coingeckoId": "osmosis",
-      "priceSources": [
-        {
-          "provider": "coinmarketcap",
-          "id": "12220",
-          "priority": 1,
-          "enabled": true
-        },
-        {
-          "provider": "coingecko",
-          "id": "osmosis",
-          "priority": 2,
-          "enabled": true
-        },
-        {
-          "provider": "vyntrex",
-          "contract": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-          "api": "https://api.vyntrex.io",
-          "priority": 1,
-          "enabled": true
-        }
-      ],
+      "vyntrexContract": "IBC/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
       "website": "https://www.lunctoken.org",
       "description": "Terra Classic Community token.",
       "verified": true,
