@@ -77,6 +77,31 @@
       "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
       "tags": ["native", "stablecoin"]
+    },
+    {
+      "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "LTK",
+      "name": "Lunctoken",
+      "denom": "ltk",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ltk.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "priceSources": [
+        {
+          "provider": "vyntrex",
+          "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+          "api": "https://api.vyntrex.io",
+          "priority": 1,
+          "enabled": true
+        }
+      ],
+      "website": "https://www.lunctoken.org",
+      "description": "Terra Classic Community token.",
+      "verified": true,
+      "tags": ["cw20", "token"]
     }
   ]
 }
