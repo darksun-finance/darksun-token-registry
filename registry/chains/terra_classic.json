@@ -84,6 +84,7 @@
       "type": "cw20",
       "symbol": "LTK",
       "name": "Lunctoken",
+      "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "denom": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a.png",
