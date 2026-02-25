@@ -110,16 +110,16 @@
       "type": "ibc",
       "symbol": "OSMO",
       "name": "Osmosis",
-      "contract": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+      "denom": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
       "decimals": 6,
       "logoURI": "tokens/terra-classic/ibc-0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B.svg",
       "coinmarketcapId": "12220",
       "coingeckoId": "osmosis",
-      "vyntrexContract": "IBC/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
-      "website": "https://www.lunctoken.org",
-      "description": "Terra Classic Community token.",
+      "vyntrexContract": "ibc/0471F1C4E7AFD3F07702BEF6DC365268D64570F7C1FDC98EA6098DD6DE59817B",
+      "website": "https://osmosis.zone/",
+      "description": "The native token of Osmosis.",
       "verified": true,
-      "tags": ["cw20", "token"]
+      "tags": ["ibc", "token"]
     }
   ]
 }
