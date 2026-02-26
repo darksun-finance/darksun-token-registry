@@ -394,6 +394,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "LTK",
+      "name": "Lunctoken",
+      "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+      "website": "https://www.lunctoken.org",
+      "description": "Terra Classic Community token.",
+      "verified": true,
+      "tags": ["cw20", "token"]
+    },
+    {
       "id": "terra_classic/ibc/18ABA66B791918D51D33415DA173632735D830E2E77E63C91C11D3008CFD5262",
       "chain": "terra_classic",
       "type": "ibc",
@@ -496,21 +513,21 @@
       "tags": ["ibc", "token"]
     },
     {
-      "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+      "id": "terra_classic/ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
       "chain": "terra_classic",
-      "type": "cw20",
-      "symbol": "LTK",
-      "name": "Lunctoken",
-      "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
-      "decimals": 6,
-      "logoURI": "tokens/terra-classic/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a.png",
-      "coinmarketcapId": "",
-      "coingeckoId": "",
-      "vyntrexContract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
-      "website": "https://www.lunctoken.org",
-      "description": "Terra Classic Community token.",
-      "verified": true,
-      "tags": ["cw20", "token"]
+      "type": "ibc",
+      "symbol": "WBTC.axl",
+      "name": "Wrapped BTC",
+      "denom": "ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
+      "decimals": 8,
+      "logoURI": "tokens/terra-classic/ibc-911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2.svg",
+      "coinmarketcapId": "3717",
+      "coingeckoId": "wrapped-bitcoin",
+      "vyntrexContract": "ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
+      "website": "https://bitcoin.org",
+      "description": "",
+      "verified": false,
+      "tags": ["ibc", "token"]
     }
   ]
 }
