@@ -205,6 +205,6 @@
       "description": "Terra Classic Community token.",
       "verified": true,
       "tags": ["cw20", "token"]
-    },
+    }
   ]
 }
