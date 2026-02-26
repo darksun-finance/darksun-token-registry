@@ -496,6 +496,23 @@
       "tags": ["ibc", "token"]
     },
     {
+      "id": "terra_classic/ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+      "chain": "terra_classic",
+      "type": "ibc",
+      "symbol": "USDC.axl",
+      "name": "Axelar Wrapped USDC",
+      "denom": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ibc-E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D.svg",
+      "coinmarketcapId": "21420",
+      "coingeckoId": "axelar-bridged-usdc",
+      "vyntrexContract": "ibc/E1E3674A0E4E1EF9C69646F9AF8D9497173821826074622D831BAB73CCB99A2D",
+      "website": "https://axelar.network",
+      "description": "Axelar Wrapped USDC",
+      "verified": true,
+      "tags": ["ibc", "token"]
+    },
+    {
       "id": "terra_classic/ibc/F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4",
       "chain": "terra_classic",
       "type": "ibc",
