@@ -89,6 +89,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/udkk",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "DKK",
+      "name": "Terra Classic DKK",
+      "denom": "udkk",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/udkk.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "udkk",
+      "website": "https://terra-classic.io",
+      "description": "Danish Krone - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/native/ueur",
       "chain": "terra_classic",
       "type": "native",
@@ -238,6 +255,23 @@
       "vyntrexContract": "umyr",
       "website": "https://terra-classic.io",
       "description": "Malaysian Ringgit - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
+      "id": "terra_classic/native/unok",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "NOK",
+      "name": "Terra Classic NOK",
+      "denom": "unok",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/unok.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "unok",
+      "website": "https://terra-classic.io",
+      "description": "Norwegian Krone - Native stablecoin asset on Terra Classic.",
       "verified": true,
       "tags": ["native", "stablecoin"]
     },
