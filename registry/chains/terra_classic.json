@@ -123,6 +123,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/uhkd",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "HKD",
+      "name": "Terra Classic HKD",
+      "denom": "uhkd",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/uhkd.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "uhkd",
+      "website": "https://terra-classic.io",
+      "description": "Hong Kong Dollar - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/native/uidr",
       "chain": "terra_classic",
       "type": "native",
@@ -170,23 +187,6 @@
       "vyntrexContract": "ujpy",
       "website": "https://terra-classic.io",
       "description": "Japanese Yen - Native stablecoin asset on Terra Classic.",
-      "verified": true,
-      "tags": ["native", "stablecoin"]
-    },
-    {
-      "id": "terra_classic/native/uhkd",
-      "chain": "terra_classic",
-      "type": "native",
-      "symbol": "HKD",
-      "name": "Terra Classic HKD",
-      "denom": "uhkd",
-      "decimals": 6,
-      "logoURI": "",
-      "coinmarketcapId": "",
-      "coingeckoId": "",
-      "vyntrexContract": "uhkd",
-      "website": "https://terra-classic.io",
-      "description": "Native stablecoin asset on Terra Classic.",
       "verified": true,
       "tags": ["native", "stablecoin"]
     },
