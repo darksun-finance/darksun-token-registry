@@ -196,7 +196,7 @@
       "symbol": "WBNB.axl",
       "name": "Wrapped BNB",
       "denom": "ibc/F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4",
-      "decimals": 6,
+      "decimals": 18,
       "logoURI": "tokens/terra-classic/ibc-F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
