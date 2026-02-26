@@ -193,7 +193,7 @@
       "id": "terra_classic/ibc/F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4",
       "chain": "terra_classic",
       "type": "ibc",
-      "symbol": "WBNB",
+      "symbol": "WBNB.axl",
       "name": "Wrapped BNB",
       "denom": "ibc/F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4",
       "decimals": 6,
@@ -201,7 +201,7 @@
       "coinmarketcapId": "",
       "coingeckoId": "",
       "vyntrexContract": "ibc/F4B1551A3470D93A725460F109FB57990702B703790D8A21C7DC66AEF3BACBF4",
-      "website": "https://bnbchain.org/en",
+      "website": "https://bnbchain.org",
       "description": "",
       "verified": false,
       "tags": ["ibc", "token"]
