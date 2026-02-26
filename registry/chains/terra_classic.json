@@ -54,6 +54,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/ucny",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "CNY",
+      "name": "Terra Classic CNY",
+      "denom": "ucny",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ucny.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "ucny",
+      "website": "https://terra-classic.io",
+      "description": "Chinese Yuan - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/native/ueur",
       "chain": "terra_classic",
       "type": "native",
@@ -118,6 +135,23 @@
       "vyntrexContract": "umnt",
       "website": "https://terra-classic.io",
       "description": "Myanmar Kyat - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
+      "id": "terra_classic/native/usdr",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "SDR",
+      "name": "Terra Classic SDR",
+      "denom": "usdr",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/usdr.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "usdr",
+      "website": "https://terra-classic.io",
+      "description": "IMF’s SDR - Native stablecoin asset on Terra Classic.",
       "verified": true,
       "tags": ["native", "stablecoin"]
     },
