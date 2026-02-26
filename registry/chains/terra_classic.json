@@ -530,11 +530,28 @@
       "tags": ["ibc", "token"]
     },
     {
+      "id": "terra_classic/ibc/386A4031D68DE6370B85F9FF7E89CEF8DE7CDE01CC193CBD87BD3ED60F6662CE",
+      "chain": "terra_classic",
+      "type": "ibc",
+      "symbol": "USDT.axl",
+      "name": "Axelar Wrapped USDT",
+      "denom": "ibc/386A4031D68DE6370B85F9FF7E89CEF8DE7CDE01CC193CBD87BD3ED60F6662CE",
+      "decimals": 18,
+      "logoURI": "tokens/terra-classic/ibc-386A4031D68DE6370B85F9FF7E89CEF8DE7CDE01CC193CBD87BD3ED60F6662CE.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "ibc/386A4031D68DE6370B85F9FF7E89CEF8DE7CDE01CC193CBD87BD3ED60F6662CE",
+      "website": "https://axelar.network",
+      "description": "Axelar Wrapped USDT",
+      "verified": false,
+      "tags": ["ibc", "token"]
+    },
+    {
       "id": "terra_classic/ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
       "chain": "terra_classic",
       "type": "ibc",
       "symbol": "WBTC.axl",
-      "name": "Wrapped BTC",
+      "name": "Axelar Wrapped BTC",
       "denom": "ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
       "decimals": 8,
       "logoURI": "tokens/terra-classic/ibc-911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2.svg",
@@ -542,7 +559,7 @@
       "coingeckoId": "wrapped-bitcoin",
       "vyntrexContract": "ibc/911B721F15A40ABB29636CBF8AE630076DDF62841ACE7E6D879405CA8870CEA2",
       "website": "https://bitcoin.org",
-      "description": "",
+      "description": "Axelar Wrapped BTC",
       "verified": false,
       "tags": ["ibc", "token"]
     }
