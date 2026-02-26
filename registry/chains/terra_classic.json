@@ -105,6 +105,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/umnt",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "MNT",
+      "name": "Terra Classic MNT",
+      "denom": "umnt",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/umnt.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "umnt",
+      "website": "https://terra-classic.io",
+      "description": "Myanmar Kyat - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/native/usek",
       "chain": "terra_classic",
       "type": "native",
