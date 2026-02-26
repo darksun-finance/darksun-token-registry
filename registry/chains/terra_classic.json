@@ -88,6 +88,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/ukrw",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "KRW",
+      "name": "Terra Classic KRW",
+      "denom": "ukrw",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/ukrw.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "ukrw",
+      "website": "https://terra-classic.io",
+      "description": "Korean Won - Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/native/usek",
       "chain": "terra_classic",
       "type": "native",
