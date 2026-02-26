@@ -411,6 +411,23 @@
       "tags": ["cw20", "token"]
     },
     {
+      "id": "terra_classic/cw20/terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ZANKA",
+      "name": "Zanka",
+      "contract": "terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt",
+      "website": "",
+      "description": "Zanka token.",
+      "verified": true,
+      "tags": ["cw20", "token"]
+    },
+    {
       "id": "terra_classic/ibc/18ABA66B791918D51D33415DA173632735D830E2E77E63C91C11D3008CFD5262",
       "chain": "terra_classic",
       "type": "ibc",
