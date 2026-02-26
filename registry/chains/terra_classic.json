@@ -411,6 +411,23 @@
       "tags": ["cw20", "token"]
     },
     {
+      "id": "terra_classic/cw20/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ELPACO",
+      "name": "EL PACO",
+      "contract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "website": "https://elpaco.lunc.tools",
+      "description": "EL PACO token.",
+      "verified": true,
+      "tags": ["cw20", "token"]
+    },
+    {
       "id": "terra_classic/cw20/terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt",
       "chain": "terra_classic",
       "type": "cw20",
