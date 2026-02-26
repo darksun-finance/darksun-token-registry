@@ -88,6 +88,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/native/setc",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "SETC",
+      "name": "Terra Classic SEK",
+      "denom": "usek",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/setc.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "usek",
+      "website": "https://terra-classic.io",
+      "description": "Native stablecoin asset on Terra Classic.",
+      "verified": true,
+      "tags": ["native", "stablecoin"]
+    },
+    {
       "id": "terra_classic/ibc/18ABA66B791918D51D33415DA173632735D830E2E77E63C91C11D3008CFD5262",
       "chain": "terra_classic",
       "type": "ibc",
