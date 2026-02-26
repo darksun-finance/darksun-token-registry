@@ -95,7 +95,7 @@
       "name": "Terra Classic SEK",
       "denom": "usek",
       "decimals": 6,
-      "logoURI": "tokens/terra-classic/setc.svg",
+      "logoURI": "tokens/terra-classic/uset.svg",
       "coinmarketcapId": "",
       "coingeckoId": "",
       "vyntrexContract": "usek",
