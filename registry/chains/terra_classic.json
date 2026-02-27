@@ -394,6 +394,23 @@
       "tags": ["native", "stablecoin"]
     },
     {
+      "id": "terra_classic/cw20/terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "JURIS",
+      "name": "Juris Protocol",
+      "contract": "terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1vhgq25vwuhdhn9xjll0rhl2s67jzw78a4g2t78y5kz89q9lsdskq2pxcj2",
+      "website": "https://www.jurisprotocol.com",
+      "description": "Bank, not a bank, but infused with digital wisdom.",
+      "verified": true,
+      "tags": ["cw20", "token"]
+    },
+    {
       "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "chain": "terra_classic",
       "type": "cw20",
