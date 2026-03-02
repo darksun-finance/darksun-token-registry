@@ -1,0 +1,68 @@
+{
+  "chain": "terra_classic",
+  "version": "1.0.0",
+  "updated_at": "2026-03-02T00:00:00Z",
+  "note": "DarkSun liquidity pools registry for Terra Classic",
+  "pools": [
+    {
+      "id": "terraswap-lunc-ustc",
+      "name": "LUNC/USTC",
+      "platform": "Terraswap",
+      "contract": "terra1xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+      "decimals": 6,
+      "enabled": true,
+      "verified": true,
+      "priority": 1,
+      "source": "manual",
+      "assets": [
+        { "type": "native", "denom": "uluna", "symbol": "LUNC" },
+        { "type": "native", "denom": "uusd", "symbol": "USTC" }
+      ]
+    },
+    {
+      "id": "terraswap-lunc-usdc",
+      "name": "LUNC/USDC",
+      "platform": "Terraswap",
+      "contract": "terra1yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy",
+      "decimals": 6,
+      "enabled": true,
+      "verified": false,
+      "priority": 2,
+      "source": "manual",
+      "assets": [
+        { "type": "native", "denom": "uluna", "symbol": "LUNC" },
+        { "type": "ibc", "denom": "ibc/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", "symbol": "USDC" }
+      ]
+    },
+    {
+      "id": "astroport-lunc-ustc",
+      "name": "LUNC/USTC",
+      "platform": "Astroport",
+      "contract": "terra1zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+      "decimals": 6,
+      "enabled": true,
+      "verified": false,
+      "priority": 3,
+      "source": "manual",
+      "assets": [
+        { "type": "native", "denom": "uluna", "symbol": "LUNC" },
+        { "type": "native", "denom": "uusd", "symbol": "USTC" }
+      ]
+    },
+    {
+      "id": "garuda-ltk-lunc",
+      "name": "LTK/LUNC",
+      "platform": "Garuda",
+      "contract": "terra1a7vjhp0nf3nnspu6m92asr64zmtjyagwx7anv76yephzuncs980s4gvfsm",
+      "decimals": 6,
+      "enabled": true,
+      "verified": true,
+      "priority": 3,
+      "source": "manual",
+      "assets": [
+        { "type": "cw20", "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a", "symbol": "LTK" },
+        { "type": "native", "denom": "uluna", "symbol": "LUNC" }
+      ]
+    }
+  ] 
+}
