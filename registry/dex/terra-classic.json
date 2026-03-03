@@ -12,6 +12,12 @@
       "name": "Terraport",
       "factory": "terra1n75fgfc8clsssrm2k0fswgtzsvstdaah7la6sfu96szdu22xta0q57rqqr",
       "router": "terra1vrqd7fkchyc7wjumn8fxly88z7kath4djjls3yc5th5g76f3543salu48s"
+    },
+    {
+      "id": "garuda",
+      "name": "Garuda",
+      "factory": "terra1ypwj6sw25g0qcykv7mzmcvsndvx56r3yrgkaw3fds7yzwl7fwwcsnxkeh7",
+      "router": "terra1frvfffkpdluzdj8lel4nyyjl2u0p6zuenhfeveulrlg6r2w4tdqqx2zr68"
     }
   ]
 }
