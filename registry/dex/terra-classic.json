@@ -23,14 +23,7 @@
       "id": "garuda",
       "name": "Garuda",
       "factory": "terra1ypwj6sw25g0qcykv7mzmcvsndvx56r3yrgkaw3fds7yzwl7fwwcsnxkeh7",
-      "router": "terra1frvfffkpdluzdj8lel4nyyjl2u0p6zuenhfeveulrlg6r2w4tdqqx2zr68",
-      "extra_pools": [
-        {
-          "contract": "terra1mq7w3f0y7z82rys2md5hqtanylm9mlpnvmdtrjvnlv3mu880qacs08rhsl",
-          "name": "LTK / LUNC",
-          "decimals": 6
-        }
-      ]
+      "router": "terra1frvfffkpdluzdj8lel4nyyjl2u0p6zuenhfeveulrlg6r2w4tdqqx2zr68"
     }
   ]
 }
