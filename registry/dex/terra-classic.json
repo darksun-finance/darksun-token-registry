@@ -8,6 +8,12 @@
       "router": "terra1g3zc8lwwmkrm0cz9wkgl849pdqaw6cq8lh7872"
     },
     {
+      "id": "astroport",
+      "name": "Astroport",
+      "factory": "terra1fnywlw4edny3vw44x04xd67uzkdqluymgreu7g",
+      "router": "terra16t7dpwwgx9n3lq6l6te3753lsjqwhxwpday9zx"
+    },
+    {
       "id": "terraport",
       "name": "Terraport",
       "factory": "terra1n75fgfc8clsssrm2k0fswgtzsvstdaah7la6sfu96szdu22xta0q57rqqr",
