@@ -4,10 +4,14 @@
     {
       "id": "terraswap",
       "name": "Terraswap",
-      "network": "columbus-5",
       "factory": "terra1jkndu9w5attpz09ut02sgey5dd3e8sq5watzm0",
-      "router": "terra1g3zc8lwwmkrm0cz9wkgl849pdqaw6cq8lh7872",
-      "token_code_id": 6036
+      "router": "terra1g3zc8lwwmkrm0cz9wkgl849pdqaw6cq8lh7872"
+    },
+    {
+      "id": "terraport",
+      "name": "Terraport",
+      "factory": "terra1n75fgfc8clsssrm2k0fswgtzsvstdaah7la6sfu96szdu22xta0q57rqqr",
+      "router": "terra1vrqd7fkchyc7wjumn8fxly88z7kath4djjls3yc5th5g76f3543salu48s"
     }
   ]
 }
