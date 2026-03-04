@@ -53,6 +53,36 @@ node scripts/validate-registry.mjs
   - `denom` for native/ibc
   - `contract` for cw20
 
+## Token Entry Format
+
+File: `registry/chains/<chain>.json`
+
+```json
+{
+  "chain": "terra_classic",
+  "name": "Terra Classic",
+  "tokens": [
+    {
+      "id": "terra_classic/native/uluna",
+      "chain": "terra_classic",
+      "type": "native",
+      "symbol": "LUNC",
+      "name": "Terra Luna Classic",
+      "denom": "uluna",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/uluna.svg",
+      "verified": true,
+      "tags": ["native", "staking"]
+    }
+  ]
+}
+```
+
+`logoURI` can be:
+
+- relative path in this repository (recommended)
+- absolute URL
+
 ## DEX Entry Format
 
 File: `registry/dex/<chain>.json`
