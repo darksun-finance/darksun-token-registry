@@ -138,3 +138,6 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 registry/.DS_Store
+tokens/.DS_Store
+assets/.DS_Store
+.DS_Store

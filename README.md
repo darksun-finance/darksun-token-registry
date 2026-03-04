@@ -1,29 +1,36 @@
 # DarkSun Token Registry
 
-Community-maintained multi-chain token registry for DarkSun.finance.
+Community-maintained multi-chain registry used by DarkSun.finance.
 
-This repository stores token metadata, logos, and verification status used by DarkSun.finance.
+This repository stores:
+
+- token metadata and token logos
+- DEX metadata (factory/router) and DEX logos
 
 ## Repository Structure
 
-- `registry/index.json`: chain index used by integrators.
-- `registry/chains/<chain>.json`: one file per blockchain (source of truth).
-- `schemas/*.json`: JSON schema references.
-- `assets/tokens/*`: token logos.
-- `.github/workflows/validate-registry.yml`: CI validation.
+- `registry/index.json`: global index used by integrators.
+- `registry/chains/<chain>.json`: token metadata per blockchain.
+- `registry/dex/<chain>.json`: DEX metadata per blockchain.
+- `tokens/<chain>/*`: token logos (`logoURI` paths).
+- `assets/dex/*`: DEX logos (`logoURI` paths).
+- `schemas/*.json`: schema references.
 - `scripts/validate-registry.mjs`: validation script.
 
 ## Quick Start
 
-1. Add or update tokens in `registry/chains/<chain>.json`.
-2. Ensure logos exist in `assets/tokens/`.
-3. Run validation locally:
+1. Add/update tokens in `registry/chains/<chain>.json`.
+2. Add/update DEX entries in `registry/dex/<chain>.json`.
+3. Ensure assets exist:
+   - token logos in `tokens/<chain>/`
+   - DEX logos in `assets/dex/`
+4. Run validation locally:
 
 ```bash
 node scripts/validate-registry.mjs
 ```
 
-4. Open PR.
+5. Open PR.
 
 ## Token Types
 
@@ -31,7 +38,7 @@ node scripts/validate-registry.mjs
 - `cw20`: contract address
 - `ibc`: IBC denom
 
-## Required Fields per token
+## Required Fields per Token
 
 - `id`
 - `chain`
@@ -46,6 +53,30 @@ node scripts/validate-registry.mjs
   - `denom` for native/ibc
   - `contract` for cw20
 
+## DEX Entry Format
+
+File: `registry/dex/<chain>.json`
+
+```json
+{
+  "chain": "terra-classic",
+  "dexes": [
+    {
+      "id": "terraswap",
+      "name": "Terraswap",
+      "logoURI": "assets/dex/terraswap.svg",
+      "factory": "terra1...",
+      "router": "terra1..."
+    }
+  ]
+}
+```
+
+`logoURI` can be:
+
+- relative path in this repository (recommended)
+- absolute URL
+
 ## Price Source Priority
 
 For each token, use ordered `priceSources` with this fallback policy:
@@ -53,16 +84,6 @@ For each token, use ordered `priceSources` with this fallback policy:
 1. `coinmarketcap`
 2. `coingecko`
 3. `vyntrex`
-
-Example:
-
-```json
-"priceSources": [
-  { "provider": "coinmarketcap", "id": "4172", "priority": 1, "enabled": true },
-  { "provider": "coingecko", "id": "terra-luna", "priority": 2, "enabled": true },
-  { "provider": "vyntrex", "contract": "terra1...", "api": "https://api.vyntrex.io", "priority": 3, "enabled": true }
-]
-```
 
 ## Notes
 

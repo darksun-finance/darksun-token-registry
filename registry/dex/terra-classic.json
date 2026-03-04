@@ -5,25 +5,29 @@
       "id": "terraswap",
       "name": "Terraswap",
       "factory": "terra1jkndu9w5attpz09ut02sgey5dd3e8sq5watzm0",
-      "router": "terra1g3zc8lwwmkrm0cz9wkgl849pdqaw6cq8lh7872"
+      "router": "terra1g3zc8lwwmkrm0cz9wkgl849pdqaw6cq8lh7872",
+      "logoURI": "assets/dex/terraswap.svg"
     },
     {
       "id": "astroport",
       "name": "Astroport",
       "factory": "terra1fnywlw4edny3vw44x04xd67uzkdqluymgreu7g",
-      "router": "terra16t7dpwwgx9n3lq6l6te3753lsjqwhxwpday9zx"
+      "router": "terra16t7dpwwgx9n3lq6l6te3753lsjqwhxwpday9zx",
+      "logoURI": "assets/dex/astroport.svg"
     },
     {
       "id": "terraport",
       "name": "Terraport",
       "factory": "terra1n75fgfc8clsssrm2k0fswgtzsvstdaah7la6sfu96szdu22xta0q57rqqr",
-      "router": "terra1vrqd7fkchyc7wjumn8fxly88z7kath4djjls3yc5th5g76f3543salu48s"
+      "router": "terra1vrqd7fkchyc7wjumn8fxly88z7kath4djjls3yc5th5g76f3543salu48s",
+      "logoURI": "assets/dex/terraport.svg"
     },
     {
       "id": "garuda",
       "name": "Garuda",
       "factory": "terra1ypwj6sw25g0qcykv7mzmcvsndvx56r3yrgkaw3fds7yzwl7fwwcsnxkeh7",
-      "router": "terra1frvfffkpdluzdj8lel4nyyjl2u0p6zuenhfeveulrlg6r2w4tdqqx2zr68"
+      "router": "terra1frvfffkpdluzdj8lel4nyyjl2u0p6zuenhfeveulrlg6r2w4tdqqx2zr68",
+      "logoURI": "assets/dex/garuda.svg"
     }
   ]
 }
