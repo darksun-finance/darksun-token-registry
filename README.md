@@ -12,6 +12,7 @@ This repository stores:
 - `registry/index.json`: global index used by integrators.
 - `registry/chains/<chain>.json`: token metadata per blockchain.
 - `registry/dex/<chain>.json`: DEX metadata per blockchain.
+- `registry/farms/<chain>.json`: farming protocol metadata per blockchain.
 - `tokens/<chain>/*`: token logos (`logoURI` paths).
 - `assets/dex/*`: DEX logos (`logoURI` paths).
 - `schemas/*.json`: schema references.
@@ -21,16 +22,17 @@ This repository stores:
 
 1. Add/update tokens in `registry/chains/<chain>.json`.
 2. Add/update DEX entries in `registry/dex/<chain>.json`.
-3. Ensure assets exist:
+3. Add/update farming protocol entries in `registry/farms/<chain>.json`.
+4. Ensure assets exist:
    - token logos in `tokens/<chain>/`
    - DEX logos in `assets/dex/`
-4. Run validation locally:
+5. Run validation locally:
 
 ```bash
 node scripts/validate-registry.mjs
 ```
 
-5. Open PR.
+6. Open PR.
 
 ## Token Types
 
@@ -82,6 +84,29 @@ File: `registry/chains/<chain>.json`
 
 - relative path in this repository (recommended)
 - absolute URL
+
+## Farming Entry Format
+
+File: `registry/farms/<chain>.json`
+
+```json
+{
+  "chain": "terra-classic",
+  "farms": [
+    {
+      "id": "terraswap-farms",
+      "dexId": "terraswap",
+      "adapter": "generic",
+      "masterContract": "terra1...",
+      "listQuery": {"pools": {"limit": 200}},
+      "listPath": "data.pools",
+      "contractFields": ["farm_contract", "staking_contract", "contract", "address"]
+    }
+  ]
+}
+```
+
+`dexId` references an entry from `registry/dex/<chain>.json`.
 
 ## DEX Entry Format
 

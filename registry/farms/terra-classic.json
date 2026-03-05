@@ -1,0 +1,45 @@
+{
+  "chain": "terra-classic",
+  "farms": [
+    {
+      "id": "terraswap-farms",
+      "dexId": "terraswap",
+      "adapter": "generic",
+      "masterContract": "",
+      "contracts": [],
+      "listQuery": {
+        "pools": {
+          "limit": 200
+        }
+      },
+      "listPath": "data.pools",
+      "contractFields": ["farm_contract", "staking_contract", "contract", "address"],
+      "positionQuery": {
+        "staker_info": {
+          "staker": "{address}",
+          "pool": "{farmContract}"
+        }
+      },
+      "positionPath": "data",
+      "stakedFields": ["bond_amount", "staked_amount", "amount", "share"],
+      "pendingFields": ["pending_reward", "pending_rewards", "rewards"]
+    },
+    {
+      "id": "garuda-farms",
+      "dexId": "garuda",
+      "adapter": "generic",
+      "contracts": [
+        "terra1vpxd52xutjuwnk50stc4v2dr0cgx73gpd9l9j704gqy25rw3wpass25k35",
+        "terra1uaz4k4wmdugrf94w2rf5qerwf86053ts7ekjtj2983fku887myus2g3v0j"
+      ],
+      "positionQuery": {
+        "staker_info": {
+        "staker": "{address}"
+        }
+      },
+      "positionPath": "data",
+      "stakedFields": ["staked_amount", "bond_amount", "amount", "share"],
+      "pendingFields": ["pending_reward", "pending_rewards", "rewards"]
+    }
+  ]
+}
