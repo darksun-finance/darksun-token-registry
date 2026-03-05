@@ -13,7 +13,12 @@
         }
       },
       "listPath": "data.pools",
-      "contractFields": ["farm_contract", "staking_contract", "contract", "address"],
+      "contractFields": [
+        "farm_contract",
+        "staking_contract",
+        "contract",
+        "address"
+      ],
       "positionQuery": {
         "staker_info": {
           "staker": "{address}",
@@ -21,8 +26,17 @@
         }
       },
       "positionPath": "data",
-      "stakedFields": ["bond_amount", "staked_amount", "amount", "share"],
-      "pendingFields": ["pending_reward", "pending_rewards", "rewards"]
+      "stakedFields": [
+        "bond_amount",
+        "staked_amount",
+        "amount",
+        "share"
+      ],
+      "pendingFields": [
+        "pending_reward",
+        "pending_rewards",
+        "rewards"
+      ]
     },
     {
       "id": "garuda-farms",
@@ -33,13 +47,25 @@
         "terra1uaz4k4wmdugrf94w2rf5qerwf86053ts7ekjtj2983fku887myus2g3v0j"
       ],
       "positionQuery": {
-        "staker_info": {
-        "staker": "{address}"
+        "stake_info": {
+          "address": "{address}"
         }
       },
       "positionPath": "data",
-      "stakedFields": ["staked_amount", "bond_amount", "amount", "share"],
-      "pendingFields": ["pending_reward", "pending_rewards", "rewards"]
+      "stakedFields": [
+        "amount",
+        "staked_amount",
+        "bond_amount",
+        "share",
+        "new_stake"
+      ],
+      "pendingFields": [
+        "pending_reward",
+        "pending_rewards",
+        "rewards",
+        "reward_info",
+        "all_rewards"
+      ]
     }
   ]
 }
