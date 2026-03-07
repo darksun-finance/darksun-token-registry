@@ -5,6 +5,7 @@ Community-maintained multi-chain registry used by DarkSun.finance.
 This repository stores:
 
 - token metadata and token logos
+- chain network endpoints (LCD/RPC)
 - DEX metadata (factory/router) and DEX logos
 
 ## Repository Structure
@@ -20,7 +21,7 @@ This repository stores:
 
 ## Quick Start
 
-1. Add/update tokens in `registry/chains/<chain>.json`.
+1. Add/update chain metadata + tokens in `registry/chains/<chain>.json` (including `network.lcd`/`network.rpc`).
 2. Add/update DEX entries in `registry/dex/<chain>.json`.
 3. Add/update farming protocol entries in `registry/farms/<chain>.json`.
 4. Ensure assets exist:
@@ -59,10 +60,27 @@ node scripts/validate-registry.mjs
 
 File: `registry/chains/<chain>.json`
 
+## Chain Network Endpoints
+
+Each chain file must define:
+
+- `network.lcd`: ordered list of LCD endpoints (first = primary, next = failover)
+- `network.rpc`: ordered list of RPC endpoints (first = primary, next = failover)
+
+Use full URLs, for example:
+
+- `https://terra-classic-lcd.publicnode.com`
+- `https://terra-classic-rpc.publicnode.com`
+
+
 ```json
 {
   "chain": "terra_classic",
   "name": "Terra Classic",
+  "network": {
+    "lcd": ["https://terra-classic-lcd.publicnode.com"],
+    "rpc": ["https://terra-classic-rpc.publicnode.com"]
+  },
   "tokens": [
     {
       "id": "terra_classic/native/uluna",
