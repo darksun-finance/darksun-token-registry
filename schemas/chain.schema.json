@@ -3,14 +3,54 @@
   "$id": "https://darksun.finance/schemas/chain.schema.json",
   "title": "DarkSun Chain Token List",
   "type": "object",
-  "required": ["chain", "name", "timestamp", "tokens"],
+  "required": [
+    "chain",
+    "name",
+    "timestamp",
+    "network",
+    "tokens"
+  ],
   "properties": {
-    "chain": { "type": "string" },
-    "name": { "type": "string" },
-    "timestamp": { "type": "string" },
+    "chain": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
     "tokens": {
       "type": "array",
-      "items": { "$ref": "./token.schema.json" }
+      "items": {
+        "$ref": "./token.schema.json"
+      }
+    },
+    "network": {
+      "type": "object",
+      "required": [
+        "lcd",
+        "rpc"
+      ],
+      "properties": {
+        "lcd": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "rpc": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

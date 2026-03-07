@@ -121,6 +121,43 @@ function isTerraContract(value) {
   return TERRA_CONTRACT_RE.test(String(value || "").trim());
 }
 
+function isHttpUrl(value) {
+  try {
+    const url = new URL(String(value || "").trim());
+    return url.protocol === "http:" || url.protocol === "https:";
+  } catch (_) {
+    return false;
+  }
+}
+
+function validateChainNetwork(network, sourceName) {
+  if (!network || typeof network !== "object") {
+    fail(`${sourceName}: missing top-level 'network' object`);
+    return;
+  }
+
+  const lcd = Array.isArray(network.lcd) ? network.lcd : [];
+  const rpc = Array.isArray(network.rpc) ? network.rpc : [];
+
+  if (!lcd.length) {
+    fail(`${sourceName}: network.lcd must contain at least one endpoint`);
+  }
+  if (!rpc.length) {
+    fail(`${sourceName}: network.rpc must contain at least one endpoint`);
+  }
+
+  for (const endpoint of lcd) {
+    if (!isHttpUrl(endpoint)) {
+      fail(`${sourceName}: invalid network.lcd endpoint '${endpoint}'`);
+    }
+  }
+  for (const endpoint of rpc) {
+    if (!isHttpUrl(endpoint)) {
+      fail(`${sourceName}: invalid network.rpc endpoint '${endpoint}'`);
+    }
+  }
+}
+
 function validateDexEntry(dex, sourceName, dexIds) {
   const required = ["id", "name", "factory"];
   for (const key of required) {
@@ -245,6 +282,8 @@ function main() {
     if (chainDoc.chain !== key) {
       fail(`${file}: top-level 'chain' must be '${key}'`);
     }
+    validateChainNetwork(chainDoc.network, file);
+
     if (!Array.isArray(chainDoc.tokens)) {
       fail(`${file}: missing tokens[]`);
       continue;

@@ -2,6 +2,18 @@
   "chain": "terra_classic",
   "name": "Terra Classic",
   "timestamp": "2026-02-25T00:00:00Z",
+  "network": {
+    "lcd": [
+      "https://terra-classic-lcd.publicnode.com",
+      "https://api-lunc-lcd.binodes.com",
+      "https://lcd.terra-classic.hexxagon.io"
+    ],
+    "rpc": [
+      "https://terra-classic-rpc.publicnode.com",
+      "https://api-lunc-rpc.binodes.com",
+      "https://rpc.terra-classic.hexxagon.io"
+    ]
+  },
   "tokens": [
     {
       "id": "terra_classic/native/uluna",
