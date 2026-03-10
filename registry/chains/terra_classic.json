@@ -642,6 +642,23 @@
       "description": "",
       "verified": false,
       "tags": ["ibc", "token"]
+    },
+    {
+      "id": "terra_classic/ibc/077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB",
+      "chain": "terra_classic",
+      "type": "ibc",
+      "symbol": "WHALE",
+      "name": "WHALE",
+      "denom": "ibc/077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB",
+      "decimals": 8,
+      "logoURI": "tokens/terra-classic/ibc-077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB.svg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "ibc/077EE5F87CE5CD419436D26533329BDC7BEE6850AD64BC316486B0DCCB13C0EB",
+      "website": "",
+      "description": "",
+      "verified": false,
+      "tags": ["ibc", "token"]
     }
   ]
 }
