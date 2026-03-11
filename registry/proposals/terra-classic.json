@@ -50,7 +50,7 @@
   "categories": [
     {
       "key": "features",
-      "label": "Requested Features",
+      "label": "Features",
       "badgeColor": "rgba(51, 146, 199, 0.28)",
       "badgeTextColor": "#c6eeff",
       "targetAmount": 10000,
@@ -73,7 +73,7 @@
     },
     {
       "key": "token_requests",
-      "label": "Requested Tokens",
+      "label": "Tokens",
       "badgeColor": "rgba(172, 106, 48, 0.32)",
       "badgeTextColor": "#ffe1be",
       "targetAmount": 4000,
@@ -81,7 +81,7 @@
     },
     {
       "key": "chain_requests",
-      "label": "Requested Chains",
+      "label": "Chains",
       "badgeColor": "rgba(102, 86, 197, 0.34)",
       "badgeTextColor": "#ded4ff",
       "targetAmount": 12000,
@@ -89,7 +89,7 @@
     },
     {
       "key": "protocol_requests",
-      "label": "Requested Protocols",
+      "label": "Protocols",
       "badgeColor": "rgba(68, 161, 113, 0.3)",
       "badgeTextColor": "#d2f8e3",
       "targetAmount": 9000,
