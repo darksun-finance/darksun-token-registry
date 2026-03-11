@@ -51,6 +51,8 @@
     {
       "key": "features",
       "label": "Requested Features",
+      "badgeColor": "rgba(51, 146, 199, 0.28)",
+      "badgeTextColor": "#c6eeff",
       "targetAmount": 10000,
       "targetAmounts": {
         "terra_classic": 10000,
@@ -64,24 +66,32 @@
     {
       "key": "reported_bugs",
       "label": "Reported Bugs",
+      "badgeColor": "rgba(181, 73, 101, 0.3)",
+      "badgeTextColor": "#ffd0d9",
       "targetAmount": 6000,
       "paymentAssetKey": "lunc"
     },
     {
       "key": "token_requests",
       "label": "Requested Tokens",
+      "badgeColor": "rgba(172, 106, 48, 0.32)",
+      "badgeTextColor": "#ffe1be",
       "targetAmount": 4000,
       "paymentAssetKey": "zanka"
     },
     {
       "key": "chain_requests",
       "label": "Requested Chains",
+      "badgeColor": "rgba(102, 86, 197, 0.34)",
+      "badgeTextColor": "#ded4ff",
       "targetAmount": 12000,
       "paymentAssetKey": "usdc_axl"
     },
     {
       "key": "protocol_requests",
       "label": "Requested Protocols",
+      "badgeColor": "rgba(68, 161, 113, 0.3)",
+      "badgeTextColor": "#d2f8e3",
       "targetAmount": 9000,
       "paymentAssetKey": "lunc"
     }
