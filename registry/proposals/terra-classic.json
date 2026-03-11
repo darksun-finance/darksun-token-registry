@@ -1,0 +1,52 @@
+{
+  "token": {
+    "chain": "terra_classic",
+    "symbol": "LTK",
+    "denom": "uluna",
+    "decimals": 6
+  },
+  "blockchains": [
+    { "key": "terra_classic", "label": "Terra Classic" },
+    { "key": "osmosis", "label": "Osmosis" },
+    { "key": "cosmos_hub", "label": "Cosmos Hub" }
+  ],
+  "categories": [
+    {
+      "key": "features",
+      "label": "Requested Features",
+      "targetAmount": 10000,
+      "targetAmounts": {
+        "terra_classic": 10000,
+        "osmosis": 12000,
+        "cosmos_hub": 15000
+      }
+    },
+    {
+      "key": "reported_bugs",
+      "label": "Reported Bugs",
+      "targetAmount": 6000,
+      "targetAmounts": {
+        "terra_classic": 6000,
+        "osmosis": 7000,
+        "cosmos_hub": 9000
+      }
+    },
+    {
+      "key": "token_requests",
+      "label": "Requested Tokens",
+      "targetAmount": 4000
+    },
+    {
+      "key": "chain_requests",
+      "label": "Requested Chains",
+      "targetAmount": 12000
+    },
+    {
+      "key": "protocol_requests",
+      "label": "Requested Protocols",
+      "targetAmount": 9000
+    }
+  ],
+  "minDonationAmount": 1,
+  "submitFeeAmount": 0
+}
