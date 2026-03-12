@@ -13,7 +13,7 @@
       "chain": "terra_classic",
       "symbol": "USDC",
       "type": "ibc",
-      "ibcDenom": "ibc/USDC_AXELAR_PLACEHOLDER",
+      "ibcDenom": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
       "decimals": 6
     },
     {
@@ -37,14 +37,22 @@
     {
       "key": "terra_classic",
       "label": "Terra Classic",
-      "acceptedPaymentAssetKeys": ["lunc", "usdc_axl", "ltk", "zanka"],
-      "defaultPaymentAssetKey": "lunc"
+      "acceptedPaymentAssetKeys": [
+        "uluna",
+        "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
+        "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a"
+      ],
+      "defaultPaymentAssetKey": "usdc_axl",
+      "escrowRecipient": "terra12qtj82wzfas0jl4ptuz0lmw8qzhu30jka6g5fq"
     },
     {
       "key": "osmosis",
       "label": "Osmosis",
-      "acceptedPaymentAssetKeys": ["usdc_axl"],
-      "defaultPaymentAssetKey": "usdc_axl"
+      "acceptedPaymentAssetKeys": [
+        "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
+      ],
+      "defaultPaymentAssetKey": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
+      "escrowRecipient": "osmo1ggd2h3xyss2ex5h6lg0y6gmydjdca3q2mugypu"
     }
   ],
   "categories": [
@@ -68,8 +76,8 @@
       "label": "Reported Bugs",
       "badgeColor": "rgba(181, 73, 101, 0.3)",
       "badgeTextColor": "#ffd0d9",
-      "targetAmount": 6000,
-      "paymentAssetKey": "lunc"
+      "targetAmount": 0,
+      "paymentAssetKey": "uluna"
     },
     {
       "key": "token_requests",
@@ -93,7 +101,7 @@
       "badgeColor": "rgba(68, 161, 113, 0.3)",
       "badgeTextColor": "#d2f8e3",
       "targetAmount": 9000,
-      "paymentAssetKey": "lunc"
+      "paymentAssetKey": "uluna"
     }
   ],
   "minDonationAmount": 1,
