@@ -7,6 +7,7 @@ This repository stores:
 - token metadata and token logos
 - chain network endpoints (LCD/RPC)
 - DEX metadata (factory/router) and DEX logos
+- proposal funding configuration per blockchain
 
 ## Repository Structure
 
@@ -14,6 +15,7 @@ This repository stores:
 - `registry/chains/<chain>.json`: token metadata per blockchain.
 - `registry/dex/<chain>.json`: DEX metadata per blockchain.
 - `registry/farms/<chain>.json`: farming protocol metadata per blockchain.
+- `registry/proposals/<chain>.json`: proposal categories, accepted funding assets, escrow routing, and USD targets.
 - `tokens/<chain>/*`: token logos (`logoURI` paths).
 - `assets/dex/*`: DEX logos (`logoURI` paths).
 - `schemas/*.json`: schema references.
@@ -24,10 +26,11 @@ This repository stores:
 1. Add/update chain metadata + tokens in `registry/chains/<chain>.json` (including `network.lcd`/`network.rpc`).
 2. Add/update DEX entries in `registry/dex/<chain>.json`.
 3. Add/update farming protocol entries in `registry/farms/<chain>.json`.
-4. Ensure assets exist:
+4. Add/update proposal rules in `registry/proposals/<chain>.json` if needed.
+5. Ensure assets exist:
    - token logos in `tokens/<chain>/`
    - DEX logos in `assets/dex/`
-5. Run validation locally:
+6. Run validation locally:
 
 ```bash
 node scripts/validate-registry.mjs
@@ -40,6 +43,15 @@ node scripts/validate-registry.mjs
 - `native`: ex. `uluna`, `uusd`
 - `cw20`: contract address
 - `ibc`: IBC denom
+
+## Proposal Targets
+
+Proposal config must use USD-only target fields:
+
+- `targetAmountUsd`: default USD target for the category
+- `targetAmountsUsd`: optional per-blockchain override in USD
+
+`targetAmountsUsd` overrides `targetAmountUsd` for the matching blockchain. It does not add to it.
 
 ## Required Fields per Token
 

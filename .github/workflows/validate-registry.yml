@@ -2,9 +2,22 @@ name: Validate Registry
 
 on:
   pull_request:
+    paths:
+      - 'registry/**'
+      - 'scripts/**'
+      - 'schemas/**'
+      - '.github/workflows/validate-registry.yml'
+      - 'package.json'
   push:
     branches:
       - main
+    paths:
+      - 'registry/**'
+      - 'scripts/**'
+      - 'schemas/**'
+      - '.github/workflows/validate-registry.yml'
+      - 'package.json'
+  workflow_dispatch:
 
 jobs:
   validate:
