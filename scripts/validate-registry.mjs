@@ -23,7 +23,32 @@ function warn(message) {
 }
 
 function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  const sourceName = path.relative(root, filePath);
+  const raw = fs.readFileSync(filePath, "utf8");
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    const message = String(error?.message || error);
+    const directMatch = message.match(/line\s+(\d+)\s+column\s+(\d+)/i);
+    if (directMatch) {
+      fail(`${sourceName}: invalid JSON at line ${directMatch[1]}, column ${directMatch[2]}: ${message}`);
+      return null;
+    }
+
+    const posMatch = message.match(/position\s+(\d+)/i);
+    if (posMatch) {
+      const position = Number(posMatch[1]);
+      const prefix = raw.slice(0, Math.max(0, position));
+      const lines = prefix.split("\n");
+      const line = lines.length;
+      const column = Number(lines[lines.length - 1]?.length || 0) + 1;
+      fail(`${sourceName}: invalid JSON at line ${line}, column ${column}: ${message}`);
+      return null;
+    }
+
+    fail(`${sourceName}: invalid JSON: ${message}`);
+    return null;
+  }
 }
 
 function chainVariants(chainKey = "") {
@@ -213,6 +238,7 @@ function validateDexEntry(dex, sourceName, dexIds) {
 function validateDexFile(filePath, chainKeys) {
   const sourceName = path.relative(root, filePath);
   const payload = readJson(filePath);
+  if (!payload) return;
 
   const fileChainKey = normalizeDexFileKey(path.basename(filePath));
   const chain = String(payload?.chain || "").trim();
@@ -286,6 +312,7 @@ function resolveProposalAssetValue(value = "", byKey = new Map(), byIdentifier =
 function validateProposalFile(filePath, chainKeys, chainTokenIdentifiers) {
   const sourceName = path.relative(root, filePath);
   const payload = readJson(filePath);
+  if (!payload) return;
   const paymentAssets = Array.isArray(payload?.paymentAssets) ? payload.paymentAssets : [];
 
   if (!paymentAssets.length) {
@@ -450,6 +477,7 @@ function main() {
   }
 
   const index = readJson(indexPath);
+  if (!index) return;
   if (!Array.isArray(index.chains) || !index.chains.length) {
     fail("registry/index.json must contain chains[]");
     return;
@@ -485,6 +513,7 @@ function main() {
     }
 
     const chainDoc = readJson(chainPath);
+    if (!chainDoc) continue;
     if (chainDoc.chain !== key) {
       fail(`${file}: top-level 'chain' must be '${key}'`);
     }
