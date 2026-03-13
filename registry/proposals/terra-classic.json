@@ -3,34 +3,22 @@
     {
       "key": "lunc",
       "chain": "terra_classic",
-      "symbol": "LUNC",
-      "type": "native",
-      "denom": "uluna",
-      "decimals": 6
+      "denom": "uluna"
     },
     {
       "key": "usdc_axl",
       "chain": "terra_classic",
-      "symbol": "USDC",
-      "type": "ibc",
-      "ibcDenom": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
-      "decimals": 6
+      "denom": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     },
     {
       "key": "ltk",
       "chain": "terra_classic",
-      "symbol": "LTK",
-      "type": "cw20",
-      "contract": "terra1replace_ltk_contract",
-      "decimals": 6
+      "denom": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a"
     },
     {
       "key": "zanka",
       "chain": "terra_classic",
-      "symbol": "ZANKA",
-      "type": "cw20",
-      "contract": "terra1replace_zanka_contract",
-      "decimals": 6
+      "denom": "terra1e4lxe4fq6k9652pyu7fyrexsns3r8tlqrdky3z03ky2ptejzdajsh0xvzt"
     }
   ],
   "blockchains": [
@@ -38,21 +26,18 @@
       "key": "terra_classic",
       "label": "Terra Classic",
       "acceptedPaymentAssetKeys": [
+        "lunc",
+        "usdc_axl",
+        "ltk"
+      ],
+      "defaultPaymentAssetKey": "usdc_axl",
+      "escrowRecipient": "terra12qtj82wzfas0jl4ptuz0lmw8qzhu30jka6g5fq",
+      "acceptedPaymentAssetRefs": [
         "uluna",
         "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
         "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a"
       ],
-      "defaultPaymentAssetKey": "usdc_axl",
-      "escrowRecipient": "terra12qtj82wzfas0jl4ptuz0lmw8qzhu30jka6g5fq"
-    },
-    {
-      "key": "osmosis",
-      "label": "Osmosis",
-      "acceptedPaymentAssetKeys": [
-        "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
-      ],
-      "defaultPaymentAssetKey": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
-      "escrowRecipient": "osmo1ggd2h3xyss2ex5h6lg0y6gmydjdca3q2mugypu"
+      "defaultPaymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     }
   ],
   "categories": [
@@ -61,49 +46,48 @@
       "label": "Features",
       "badgeColor": "rgba(51, 146, 199, 0.28)",
       "badgeTextColor": "#c6eeff",
-      "targetAmount": 10000,
-      "targetAmounts": {
-        "terra_classic": 10000,
-        "osmosis": 12000
-      },
-      "paymentAssetKeys": {
-        "terra_classic": "ltk",
-        "osmosis": "usdc_axl"
-      }
+      "paymentAssetKey": "usdc_axl",
+      "targetAmountUsd": 1000,
+      "paymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
     },
     {
       "key": "reported_bugs",
       "label": "Reported Bugs",
       "badgeColor": "rgba(181, 73, 101, 0.3)",
       "badgeTextColor": "#ffd0d9",
-      "targetAmount": 0,
-      "paymentAssetKey": "uluna"
+      "paymentAssetKey": "usdc_axl",
+      "targetAmountUsd": 0,
+      "paymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     },
     {
       "key": "token_requests",
       "label": "Tokens",
       "badgeColor": "rgba(172, 106, 48, 0.32)",
       "badgeTextColor": "#ffe1be",
-      "targetAmount": 4000,
-      "paymentAssetKey": "zanka"
+      "paymentAssetKey": "usdc_axl",
+      "targetAmountUsd": 10,
+      "paymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     },
     {
       "key": "chain_requests",
       "label": "Chains",
       "badgeColor": "rgba(102, 86, 197, 0.34)",
       "badgeTextColor": "#ded4ff",
-      "targetAmount": 12000,
-      "paymentAssetKey": "usdc_axl"
+      "paymentAssetKey": "usdc_axl",
+      "targetAmountUsd": 10000,
+      "paymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     },
     {
       "key": "protocol_requests",
       "label": "Protocols",
       "badgeColor": "rgba(68, 161, 113, 0.3)",
       "badgeTextColor": "#d2f8e3",
-      "targetAmount": 9000,
-      "paymentAssetKey": "uluna"
+      "paymentAssetKey": "usdc_axl",
+      "targetAmountUsd": 1000,
+      "paymentAssetRef": "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5"
     }
   ],
   "minDonationAmount": 1,
-  "submitFeeAmount": 0
+  "submitFeeAmount": 0,
+  "schemaVersion": 2
 }
