@@ -1,0 +1,22 @@
+{
+  "name": "DarkSun UI Social Icons",
+  "timestamp": "2026-03-16T00:00:00Z",
+  "socials": {
+    "github": {
+      "label": "GitHub",
+      "iconURI": "assets/social/github.svg"
+    },
+    "telegram": {
+      "label": "Telegram",
+      "iconURI": "assets/social/telegram.svg"
+    },
+    "x": {
+      "label": "X",
+      "iconURI": "assets/social/x.svg"
+    },
+    "email": {
+      "label": "Email",
+      "iconURI": "assets/social/email.svg"
+    }
+  }
+}
