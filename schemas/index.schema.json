@@ -3,19 +3,67 @@
   "$id": "https://darksun.finance/schemas/index.schema.json",
   "title": "DarkSun Registry Index",
   "type": "object",
-  "required": ["name", "timestamp", "chains"],
+  "required": [
+    "name",
+    "timestamp",
+    "chains"
+  ],
   "properties": {
-    "name": { "type": "string" },
-    "timestamp": { "type": "string" },
+    "name": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string"
+    },
     "chains": {
       "type": "array",
       "items": {
         "type": "object",
-        "required": ["key", "name", "file"],
+        "required": [
+          "key",
+          "name",
+          "file"
+        ],
         "properties": {
-          "key": { "type": "string" },
-          "name": { "type": "string" },
-          "file": { "type": "string" }
+          "key": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "file": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "name"
+        ],
+        "properties": {
+          "key": {
+            "type": "string",
+            "minLength": 1
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "url": {
+            "type": "string"
+          },
+          "icon": {
+            "type": "string"
+          },
+          "tone": {
+            "type": "string"
+          }
         },
         "additionalProperties": false
       }
