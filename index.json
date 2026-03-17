@@ -10,5 +10,35 @@
   ],
   "ui": {
     "socials": "registry/ui/socials.json"
-  }
+  },
+  "sources": [
+    {
+      "key": "coingecko",
+      "name": "CoinGecko",
+      "url": "https://www.coingecko.com/",
+      "icon": "tokens/sources/coingecko.svg",
+      "tone": "cyan"
+    },
+    {
+      "key": "vyntrex",
+      "name": "Vyntrex",
+      "url": "https://vyntrex.io/",
+      "icon": "tokens/sources/vyntrex.png",
+      "tone": "magenta"
+    },
+    {
+      "key": "coinmarketcap",
+      "name": "CoinMarketCap",
+      "url": "https://coinmarketcap.com/",
+      "icon": "tokens/sources/coinmarketcap.png",
+      "tone": "solar"
+    },
+    {
+      "key": "validator-info",
+      "name": "Validator.info",
+      "url": "https://validator.info/",
+      "icon": "tokens/sources/validator-info.jpg",
+      "tone": "yellow"
+    }
+  ]
 }
