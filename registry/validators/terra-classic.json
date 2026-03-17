@@ -1,0 +1,10 @@
+{
+  "validators": [
+    {
+      "operatorAddress": "terravaloper1...",
+      "moniker": "Uncode Lounge",
+      "website": "https://example.com",
+      "logo": "tokens/validators/uncode-lounge.png"
+    }
+  ]
+}
