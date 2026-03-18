@@ -1,10 +1,10 @@
 {
   "validators": [
     {
-      "operatorAddress": "terravaloper1...",
+      "operatorAddress": "terravaloper1suphyxuf7xqf2tz8vcsnlferzulskjm236dn3g",
       "moniker": "Uncode Lounge",
-      "website": "https://example.com",
-      "logo": "tokens/validators/uncode-lounge.png"
+      "website": "https://linktr.ee/uncodelounge",
+      "logo": "assets/validators/uncode-lounge.jpg"
     }
   ]
 }
