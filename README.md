@@ -1,182 +1,215 @@
 # DarkSun Token Registry
 
-Community-maintained multi-chain registry used by DarkSun.finance.
+Public registry for DarkSun token, validator, chain, DEX, farm, and proposal metadata.
 
-This repository stores:
+This repository is designed to be shared with token and ecosystem owners so they can propose safe, reviewable metadata updates for the DarkSun frontend and backend.
 
-- token metadata and token logos
-- chain network endpoints (LCD/RPC)
-- DEX metadata (factory/router) and DEX logos
-- proposal funding configuration per blockchain
+## What This Repository Contains
+
+The registry may include:
+
+- token metadata and logos
+- validator metadata and logos
+- public chain endpoints and chain display metadata
+- public DEX and farm metadata
+- proposal and funding configuration used by governance features
+- public source/provider metadata used by the UI
+
+Everything committed here must be safe to publish publicly.
+
+## Public-Only Policy
+
+This repository is public-facing configuration.
+Only commit information that is already public and intended to be consumed by applications and users.
+
+Allowed examples:
+
+- public project website and social links
+- public token logos
+- public validator logos
+- public LCD/RPC/REST endpoints intended for application use
+- public contract addresses
+- public validator operator addresses
+- public provider websites and logos
+
+Never commit:
+
+- API keys
+- bearer tokens
+- passwords
+- private keys
+- seed phrases / mnemonics
+- admin or back-office URLs
+- private RPC/LCD endpoints
+- staging URLs not meant for end users
+- unpublished contract addresses
+- internal contacts or operational notes
 
 ## Repository Structure
 
-- `registry/index.json`: global index used by integrators.
-- `registry/chains/<chain>.json`: token metadata per blockchain.
-- `registry/dex/<chain>.json`: DEX metadata per blockchain.
-- `registry/farms/<chain>.json`: farming protocol metadata per blockchain.
-- `registry/proposals/<chain>.json`: proposal categories, accepted funding assets, escrow routing, and USD targets.
-- `tokens/<chain>/*`: token logos (`logoURI` paths).
-- `assets/dex/*`: DEX logos (`logoURI` paths).
-- `schemas/*.json`: schema references.
-- `scripts/validate-registry.mjs`: validation script.
+```text
+index.json
+registry/
+  index.json
+  chains/
+  dex/
+  farms/
+  proposals/
+  ui/
+  validators/
+assets/
+  dex/
+  validators/
+tokens/
+  <chain>/
+  sources/
+schemas/
+scripts/
+```
 
-## Quick Start
+Important paths:
 
-1. Add/update chain metadata + tokens in `registry/chains/<chain>.json` (including `network.lcd`/`network.rpc`).
-2. Add/update DEX entries in `registry/dex/<chain>.json`.
-3. Add/update farming protocol entries in `registry/farms/<chain>.json`.
-4. Add/update proposal rules in `registry/proposals/<chain>.json` if needed.
-5. Ensure assets exist:
-   - token logos in `tokens/<chain>/`
-   - DEX logos in `assets/dex/`
-6. Run validation locally:
+- `registry/chains/<chain>.json`: chain metadata, public endpoints, token list references
+- `registry/dex/<chain>.json`: DEX metadata and public contracts
+- `registry/farms/<chain>.json`: farm metadata
+- `registry/proposals/<chain>.json`: public proposal funding configuration
+- `registry/validators/<chain>.json`: validator metadata such as moniker, website, logo
+- `assets/validators/`: validator logo files
+- `tokens/<chain>/`: token logos and token-specific assets
+- `tokens/sources/`: provider/source logos used in the UI
+- `schemas/`: JSON schemas used for validation
+
+## What Token Owners Can Update
+
+Token and ecosystem owners can propose updates for public metadata such as:
+
+- token name, symbol, description, decimals
+- token logo and branding links
+- official website and social links
+- price source references
+- validator logo and website
+- DEX / farm metadata that is already public
+
+All submitted information should be verifiable from official public sources.
+
+## Token Example
+
+```json
+{
+  "symbol": "LUNC",
+  "name": "Terra Luna Classic",
+  "decimals": 6,
+  "website": "https://terra-classic.money/",
+  "x": "https://x.com/terra_money",
+  "logo": "tokens/terra_classic/lunc.png",
+  "coinmarketcapId": "4172",
+  "coingeckoId": "terra-luna",
+  "priceSources": ["coinmarketcap", "coingecko"]
+}
+```
+
+## Source / Provider Example
+
+Global provider metadata can be declared once and then referenced by key.
+
+```json
+{
+  "sources": [
+    {
+      "key": "coingecko",
+      "name": "CoinGecko",
+      "url": "https://www.coingecko.com/",
+      "icon": "tokens/sources/coingecko.svg",
+      "tone": "cyan"
+    }
+  ]
+}
+```
+
+A token can then reference it like this:
+
+```json
+{
+  "symbol": "LUNC",
+  "priceSources": ["coingecko", "coinmarketcap"]
+}
+```
+
+## Validator Example
+
+Validator metadata should only contain public information.
+
+```json
+{
+  "validators": [
+    {
+      "operatorAddress": "terravaloper1...",
+      "moniker": "Uncode Lounge",
+      "website": "https://linktr.ee/uncodelounge",
+      "logo": "assets/validators/uncode-lounge.jpg"
+    }
+  ]
+}
+```
+
+## Assets
+
+Use repository-hosted assets whenever possible.
+
+Examples:
+
+- `tokens/terra_classic/lunc.png`
+- `tokens/sources/coingecko.svg`
+- `assets/validators/uncode-lounge.jpg`
+
+Guidelines:
+
+- use clear, stable filenames
+- prefer transparent backgrounds when possible
+- avoid excessively large files
+- keep branding assets official and up to date
+
+## Public Endpoints
+
+Chain files may include public application endpoints such as:
+
+- LCD / REST API URLs
+- RPC URLs
+- explorer URLs
+- governance / community links
+
+Only include endpoints that are intended for public client use.
+Do not add private infrastructure, rate-limit bypass URLs, or internal failover endpoints.
+
+## Validation
+
+Validate changes before opening a pull request.
 
 ```bash
 node scripts/validate-registry.mjs
 ```
 
-6. Open PR.
+If your environment already has the approved command configured, run the same validation command from the repository root.
 
-## Token Types
+## Contribution Flow
 
-- `native`: ex. `uluna`, `uusd`
-- `cw20`: contract address
-- `ibc`: IBC denom
+1. Fork the repository.
+2. Make small, focused metadata changes.
+3. Add or update public assets if needed.
+4. Run validation.
+5. Open a pull request with proof links.
 
-## Proposal Targets
+For detailed expectations, see [CONTRIBUTING.md](./CONTRIBUTING.md).
+For disclosure and safe-publication guidance, see [SECURITY.md](./SECURITY.md).
 
-Proposal config must use USD-only target fields:
+## Review Expectations
 
-- `targetAmountUsd`: default USD target for the category
-- `targetAmountsUsd`: optional per-blockchain override in USD
+Pull requests are reviewed for:
 
-`targetAmountsUsd` overrides `targetAmountUsd` for the matching blockchain. It does not add to it.
+- correctness
+- public verifiability
+- schema validity
+- asset quality
+- security and publication safety
 
-## Required Fields per Token
-
-- `id`
-- `chain`
-- `type`
-- `symbol`
-- `name`
-- `decimals`
-- `verified`
-- `tags`
-- `logoURI`
-- one identifier:
-  - `denom` for native/ibc
-  - `contract` for cw20
-
-## Token Entry Format
-
-File: `registry/chains/<chain>.json`
-
-## Chain Network Endpoints
-
-Each chain file must define:
-
-- `network.lcd`: ordered list of LCD endpoints (first = primary, next = failover)
-- `network.rpc`: ordered list of RPC endpoints (first = primary, next = failover)
-
-Use full URLs, for example:
-
-- `https://terra-classic-lcd.publicnode.com`
-- `https://terra-classic-rpc.publicnode.com`
-
-
-```json
-{
-  "chain": "terra_classic",
-  "name": "Terra Classic",
-  "network": {
-    "lcd": ["https://terra-classic-lcd.publicnode.com"],
-    "rpc": ["https://terra-classic-rpc.publicnode.com"]
-  },
-  "tokens": [
-    {
-      "id": "terra_classic/native/uluna",
-      "chain": "terra_classic",
-      "type": "native",
-      "symbol": "LUNC",
-      "name": "Terra Luna Classic",
-      "denom": "uluna",
-      "decimals": 6,
-      "logoURI": "tokens/terra-classic/uluna.svg",
-      "verified": true,
-      "tags": ["native", "staking"]
-    }
-  ]
-}
-```
-
-`logoURI` can be:
-
-- relative path in this repository (recommended)
-- absolute URL
-
-## Farming Entry Format
-
-File: `registry/farms/<chain>.json`
-
-```json
-{
-  "chain": "terra-classic",
-  "farms": [
-    {
-      "id": "terraswap-farms",
-      "dexId": "terraswap",
-      "adapter": "generic",
-      "masterContract": "terra1...",
-      "listQuery": {"pools": {"limit": 200}},
-      "listPath": "data.pools",
-      "contractFields": ["farm_contract", "staking_contract", "contract", "address"]
-    }
-  ]
-}
-```
-
-`dexId` references an entry from `registry/dex/<chain>.json`.
-
-## DEX Entry Format
-
-File: `registry/dex/<chain>.json`
-
-```json
-{
-  "chain": "terra-classic",
-  "dexes": [
-    {
-      "id": "terraswap",
-      "name": "Terraswap",
-      "logoURI": "assets/dex/terraswap.svg",
-      "factory": "terra1...",
-      "router": "terra1..."
-    }
-  ]
-}
-```
-
-`logoURI` can be:
-
-- relative path in this repository (recommended)
-- absolute URL
-
-## Price Source Priority
-
-For each token, use ordered `priceSources` with this fallback policy:
-
-1. `coinmarketcap`
-2. `coingecko`
-3. `vyntrex`
-
-## Notes
-
-- Keep symbols uppercase.
-- Keep IDs unique globally.
-- Prefer lowercase addresses/denoms for identifiers.
-- Use meaningful tags (`defi`, `stablecoin`, `meme`, `governance`, etc.).
-
-## License
-
-MIT
+Maintainers may refuse changes that expose private infrastructure or unverifiable metadata.
