@@ -11,6 +11,7 @@ You can propose updates for things like:
 - official website
 - official social links
 - public price-source references
+- DAO DAO staking contracts and public DAO page (if your token uses DAO DAO staking)
 
 ## What You Should Not Add
 

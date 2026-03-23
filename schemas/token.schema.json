@@ -137,6 +137,43 @@
         "type": "string"
       },
       "uniqueItems": true
+    },
+    "daoDao": {
+      "type": "object",
+      "properties": {
+        "daoCore": {
+          "type": "string",
+          "minLength": 1
+        },
+        "daoName": {
+          "type": "string",
+          "minLength": 1
+        },
+        "daoUrl": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stakingContract": {
+          "type": "string",
+          "minLength": 1
+        },
+        "rewardsContract": {
+          "type": "string"
+        },
+        "unstakingDurationDays": {
+          "type": "number",
+          "minimum": 0
+        },
+        "validatorMoniker": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "daoCore",
+        "stakingContract"
+      ],
+      "additionalProperties": false
     }
   },
   "allOf": [
