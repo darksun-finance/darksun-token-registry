@@ -87,6 +87,7 @@ Token and ecosystem owners can propose updates for public metadata such as:
 - token logo and branding links
 - official website and social links
 - price source references
+- DAO DAO staking metadata for token-based governance tokens
 - validator logo and website
 - DEX / farm metadata that is already public
 
