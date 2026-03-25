@@ -1,0 +1,12 @@
+{
+  "chain": "terra_classic",
+  "protocols": [
+    {
+      "id": "dao_dao",
+      "name": "DAO DAO",
+      "website": "https://daodao.zone/",
+      "description": "DAO and governance protocol",
+      "category": "governance"
+    }
+  ]
+}
