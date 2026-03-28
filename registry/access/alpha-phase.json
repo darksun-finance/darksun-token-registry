@@ -2,7 +2,9 @@
   "chains": [
     {
       "key": "terra_classic",
-      "wallets": []
+      "wallets": [
+        "terra1suphyxuf7xqf2tz8vcsnlferzulskjm234pwpm"
+      ]
     }
   ]
 }
