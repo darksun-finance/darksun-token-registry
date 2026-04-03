@@ -1,6 +1,6 @@
 {
   "name": "DarkSun Token Registry",
-  "timestamp": "2026-03-16T00:00:00Z",
+  "timestamp": "2026-04-03T00:00:00Z",
   "chains": [
     {
       "key": "terra_classic",
@@ -11,6 +11,12 @@
   "ui": {
     "socials": "registry/ui/socials.json"
   },
+  "protocols": [
+    {
+      "chain": "terra_classic",
+      "file": "registry/protocols/terra-classic.json"
+    }
+  ],
   "sources": [
     {
       "key": "coingecko",
