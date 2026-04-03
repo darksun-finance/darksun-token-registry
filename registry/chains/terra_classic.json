@@ -563,7 +563,16 @@
       "tags": [
         "cw20",
         "token"
-      ]
+      ],
+      "daoDao": {
+        "daoCore": "terra1ds9p8vqq056gln5rxz8s7apdlu9lr8j57vhjjj6t9wyfttlraadqm4q6j5",
+        "daoName": "Zanklinks",
+        "daoUrl": "https://daodao.zone/dao/terra1ds9p8vqq056gln5rxz8s7apdlu9lr8j57vhjjj6t9wyfttlraadqm4q6j5/home",
+        "stakingContract": "",
+        "rewardsContract": "",
+        "unstakingDurationDays": 5,
+        "validatorMoniker": "DAO DAO"
+      }
     },
     {
       "id": "terra_classic/ibc/18ABA66B791918D51D33415DA173632735D830E2E77E63C91C11D3008CFD5262",
