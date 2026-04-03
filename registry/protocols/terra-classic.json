@@ -12,6 +12,7 @@
     {
       "id": "ustr-cmm",
       "name": "USTR CMM",
+      "addedAt": "2026-04-03T00:00:00Z",
       "category": "monetary_protocol",
       "status": "experimental",
       "description": "Collateralized treasury, USTC to USTR swap, and future UST1 monetary system on Terra Classic.",
