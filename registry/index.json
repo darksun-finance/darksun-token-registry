@@ -46,5 +46,8 @@
       "icon": "tokens/sources/validator-info.jpg",
       "tone": "yellow"
     }
-  ]
+  ],
+  "protocols": {
+    "terra_classic": "registry/protocols/terra-classic.json"
+  }
 }
