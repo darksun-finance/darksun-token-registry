@@ -497,6 +497,32 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra1f6z0ylpshz9j0ytjcqlmyl3fmf8v7uwa7k7ar6craz247lum3wwq6jwh3u",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ART",
+      "name": "ARTEMIS",
+      "contract": "terra1f6z0ylpshz9j0ytjcqlmyl3fmf8v7uwa7k7ar6craz247lum3wwq6jwh3u",
+      "decimals": 6,
+      "logoURI": "https://i.ibb.co/B5fXHgJs/IMG-2006.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1f6z0ylpshz9j0ytjcqlmyl3fmf8v7uwa7k7ar6craz247lum3wwq6jwh3u",
+      "website": "https://artemisprotocol.us/",
+      "description": "ARTEMIS token on Terra Classic.",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ],
+      "daoDao": {
+        "daoCore": "terra1fwqm0uh7ks0q7jry6p0r7jmzw4x3y3knlmz0gpjugunz2f8xu55slzhzn3",
+        "daoName": "Artemis Protocol DAO",
+        "daoUrl": "https://daodao.zone/dao/terra1fwqm0uh7ks0q7jry6p0r7jmzw4x3y3knlmz0gpjugunz2f8xu55slzhzn3/home",
+        "unstakingDurationDays": 7
+      }
+    },
+    {
       "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "chain": "terra_classic",
       "type": "cw20",
