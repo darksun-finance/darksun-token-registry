@@ -497,6 +497,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra1x6e64es6yhauhvs3prvpdg2gkqdtfru840wgnhs935x8axr7zxkqzysuxz",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ALPHA",
+      "name": "ALPHA",
+      "contract": "terra1x6e64es6yhauhvs3prvpdg2gkqdtfru840wgnhs935x8axr7zxkqzysuxz",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1x6e64es6yhauhvs3prvpdg2gkqdtfru840wgnhs935x8axr7zxkqzysuxz.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1x6e64es6yhauhvs3prvpdg2gkqdtfru840wgnhs935x8axr7zxkqzysuxz",
+      "website": "",
+      "description": "ALPHA Lunc Universe.",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra1f6z0ylpshz9j0ytjcqlmyl3fmf8v7uwa7k7ar6craz247lum3wwq6jwh3u",
       "chain": "terra_classic",
       "type": "cw20",
@@ -521,6 +541,26 @@
         "daoUrl": "https://daodao.zone/dao/terra1fwqm0uh7ks0q7jry6p0r7jmzw4x3y3knlmz0gpjugunz2f8xu55slzhzn3/home",
         "unstakingDurationDays": 7
       }
+    },
+    {
+      "id": "terra_classic/cw20/terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "GRDX",
+      "name": "GARUDAX TOKEN",
+      "contract": "terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw",
+      "website": "",
+      "description": "GARUDAX TOKEN",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
     },
     {
       "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
