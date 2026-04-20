@@ -543,6 +543,106 @@
       }
     },
     {
+      "id": "terra_classic/cw20/terra192dmx27220vvw2e90vcpseu90evgpu90z0l730hy4xjh60ctx9sqe9cm9m",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "BURNIX",
+      "name": "Burnix",
+      "contract": "terra192dmx27220vvw2e90vcpseu90evgpu90z0l730hy4xjh60ctx9sqe9cm9m",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra192dmx27220vvw2e90vcpseu90evgpu90z0l730hy4xjh60ctx9sqe9cm9m.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra192dmx27220vvw2e90vcpseu90evgpu90z0l730hy4xjh60ctx9sqe9cm9m",
+      "website": "https://burnix.top/",
+      "description": "Burnix",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1m58hc296srr6xygrrfyu6u0e32pl8d459nfs55pmegke8zlv94rqsjz882",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "CATWIFHAT",
+      "name": "Cat Wif Hat",
+      "contract": "terra1m58hc296srr6xygrrfyu6u0e32pl8d459nfs55pmegke8zlv94rqsjz882",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1m58hc296srr6xygrrfyu6u0e32pl8d459nfs55pmegke8zlv94rqsjz882.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1m58hc296srr6xygrrfyu6u0e32pl8d459nfs55pmegke8zlv94rqsjz882",
+      "website": "",
+      "description": "Cat Wif Hat",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra15p8su45k45axng8ue59rl6zph4at27s49u3agr6uqrx3dhcxpg3qt0ekdt",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "DO",
+      "name": "DO Coin",
+      "contract": "terra15p8su45k45axng8ue59rl6zph4at27s49u3agr6uqrx3dhcxpg3qt0ekdt",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra15p8su45k45axng8ue59rl6zph4at27s49u3agr6uqrx3dhcxpg3qt0ekdt.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra15p8su45k45axng8ue59rl6zph4at27s49u3agr6uqrx3dhcxpg3qt0ekdt",
+      "website": "https://linktr.ee/cookiemunity",
+      "description": "Do Coin",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ELPACO",
+      "name": "EL PACO",
+      "contract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "website": "https://elpaco.lunc.tools",
+      "description": "EL PACO token.",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "FRG",
+      "name": "FRG Universe",
+      "contract": "terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt",
+      "website": "",
+      "description": "FRG Universe",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw",
       "chain": "terra_classic",
       "type": "cw20",
@@ -556,6 +656,26 @@
       "vyntrexContract": "terra12f3f5fzfzxckc0qlv3rmwwkjfhzevpwmx77345n0zuu2678vxf0sm6vvcw",
       "website": "",
       "description": "GARUDAX TOKEN",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1jk858n7t29llucje6c8dhwslrz9x424u2l6mw3hxjfljt65pcf3s9q2vzm",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "IDEV",
+      "name": "iDev",
+      "contract": "terra1jk858n7t29llucje6c8dhwslrz9x424u2l6mw3hxjfljt65pcf3s9q2vzm",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1jk858n7t29llucje6c8dhwslrz9x424u2l6mw3hxjfljt65pcf3s9q2vzm.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1jk858n7t29llucje6c8dhwslrz9x424u2l6mw3hxjfljt65pcf3s9q2vzm",
+      "website": "https://idev.games/",
+      "description": "Participate on iDev Games and earn dev coins.",
       "verified": true,
       "tags": [
         "cw20",
@@ -592,19 +712,108 @@
       }
     },
     {
-      "id": "terra_classic/cw20/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "id": "terra_classic/cw20/terra1lz6lnuk64hrcx8t2qgs2ktyzqaxyd4vl76ga47c9fhd6w4erv4cqrjafjl",
       "chain": "terra_classic",
       "type": "cw20",
-      "symbol": "ELPACO",
-      "name": "EL PACO",
-      "contract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
+      "symbol": "LCPIE",
+      "name": "LuncPrime",
+      "contract": "terra1lz6lnuk64hrcx8t2qgs2ktyzqaxyd4vl76ga47c9fhd6w4erv4cqrjafjl",
       "decimals": 6,
-      "logoURI": "tokens/terra-classic/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4.png",
+      "logoURI": "tokens/terra-classic/terra1lz6lnuk64hrcx8t2qgs2ktyzqaxyd4vl76ga47c9fhd6w4erv4cqrjafjl.jpg",
       "coinmarketcapId": "",
       "coingeckoId": "",
-      "vyntrexContract": "terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
-      "website": "https://elpaco.lunc.tools",
-      "description": "EL PACO token.",
+      "vyntrexContract": "terra1lz6lnuk64hrcx8t2qgs2ktyzqaxyd4vl76ga47c9fhd6w4erv4cqrjafjl",
+      "website": "",
+      "description": "LuncPrime – The Premium Access Token of the LUNC Community LuncPrime is an exclusive utility token within the Terra Classic ecosystem that unlocks access to high-quality content for its holders.",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ],
+      "daoDao": {
+        "daoCore": "terra1s50hugf0v277ulp9ewz287jerc2dm7clpksjzz8xq7cnnglvwppsg0fjwl",
+        "daoName": "LCPIE - LuncPrime",
+        "daoUrl": "https://daodao.zone/dao/terra1s50hugf0v277ulp9ewz287jerc2dm7clpksjzz8xq7cnnglvwppsg0fjwl/home",
+        "stakingContract": "",
+        "rewardsContract": "",
+        "unstakingDurationDays": 14,
+        "validatorMoniker": "DAO DAO"
+      }
+    },
+    {
+      "id": "terra_classic/cw20/terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "QUID",
+      "name": "Liquid",
+      "contract": "terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79.jpeg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79",
+      "website": "",
+      "description": "Liquid",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra12j3xuxx52cg045qk37ee4k4u4fsgvyuf8d89dh7c9mr706jvxdascahqej",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ROTTI",
+      "name": "Rottweiler",
+      "contract": "terra12j3xuxx52cg045qk37ee4k4u4fsgvyuf8d89dh7c9mr706jvxdascahqej",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra12j3xuxx52cg045qk37ee4k4u4fsgvyuf8d89dh7c9mr706jvxdascahqej.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra12j3xuxx52cg045qk37ee4k4u4fsgvyuf8d89dh7c9mr706jvxdascahqej",
+      "website": "",
+      "description": "Rottweiler",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1gzs0926z2u6f2w9afk6ks4z9gkjpac00x60fy9yu903qjjz6nk9qmu5jx3",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "SAIYAN",
+      "name": "Saiyan Squad",
+      "contract": "terra1gzs0926z2u6f2w9afk6ks4z9gkjpac00x60fy9yu903qjjz6nk9qmu5jx3",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1gzs0926z2u6f2w9afk6ks4z9gkjpac00x60fy9yu903qjjz6nk9qmu5jx3.gif",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1gzs0926z2u6f2w9afk6ks4z9gkjpac00x60fy9yu903qjjz6nk9qmu5jx3",
+      "website": "",
+      "description": "Saiyan Squad",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1r3eaa2tucjr3es88wzuqpgxvssqflk9cghrjmf9uneds8wljyapqwtrcp5",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "USTRIX",
+      "name": "USTRIX",
+      "contract": "terra1r3eaa2tucjr3es88wzuqpgxvssqflk9cghrjmf9uneds8wljyapqwtrcp5",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1r3eaa2tucjr3es88wzuqpgxvssqflk9cghrjmf9uneds8wljyapqwtrcp5.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1r3eaa2tucjr3es88wzuqpgxvssqflk9cghrjmf9uneds8wljyapqwtrcp5",
+      "website": "",
+      "description": "USTRIX",
       "verified": true,
       "tags": [
         "cw20",
