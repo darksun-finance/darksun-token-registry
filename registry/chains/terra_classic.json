@@ -583,6 +583,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra19eytmx0yd3m5udlv7rh6u429g6ddjm2cndwv5cxndcymrztx4krqz9p4t6",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "COFFEE",
+      "name": "COFFEE",
+      "contract": "terra19eytmx0yd3m5udlv7rh6u429g6ddjm2cndwv5cxndcymrztx4krqz9p4t6",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra19eytmx0yd3m5udlv7rh6u429g6ddjm2cndwv5cxndcymrztx4krqz9p4t6.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra19eytmx0yd3m5udlv7rh6u429g6ddjm2cndwv5cxndcymrztx4krqz9p4t6",
+      "website": "",
+      "description": "COFFEE",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra15p8su45k45axng8ue59rl6zph4at27s49u3agr6uqrx3dhcxpg3qt0ekdt",
       "chain": "terra_classic",
       "type": "cw20",
@@ -623,6 +643,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra15gjgmln8xj72rf69tx2zlrtcjzzvkcrdvrvfnmxja6kacz07pg0ssflecz",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "FOOD",
+      "name": "Food Token",
+      "contract": "terra15gjgmln8xj72rf69tx2zlrtcjzzvkcrdvrvfnmxja6kacz07pg0ssflecz",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra15gjgmln8xj72rf69tx2zlrtcjzzvkcrdvrvfnmxja6kacz07pg0ssflecz.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra15gjgmln8xj72rf69tx2zlrtcjzzvkcrdvrvfnmxja6kacz07pg0ssflecz",
+      "website": "",
+      "description": "Food Token",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt",
       "chain": "terra_classic",
       "type": "cw20",
@@ -636,6 +676,26 @@
       "vyntrexContract": "terra14rfnhc2aru7jp304lht3yf903necsnrt4cxd464cftsfcksw0rtsgundnt",
       "website": "",
       "description": "FRG Universe",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1le9l8gpwl2f48xluphnwkqrnhwxqt27xhducfzqvncmsh9swavlqjpy7c9",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "FUN",
+      "name": "FUNTOKEN",
+      "contract": "terra1le9l8gpwl2f48xluphnwkqrnhwxqt27xhducfzqvncmsh9swavlqjpy7c9",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1le9l8gpwl2f48xluphnwkqrnhwxqt27xhducfzqvncmsh9swavlqjpy7c9.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1le9l8gpwl2f48xluphnwkqrnhwxqt27xhducfzqvncmsh9swavlqjpy7c9",
+      "website": "",
+      "description": "FUNTOKEN",
       "verified": true,
       "tags": [
         "cw20",
@@ -676,6 +736,26 @@
       "vyntrexContract": "terra1jk858n7t29llucje6c8dhwslrz9x424u2l6mw3hxjfljt65pcf3s9q2vzm",
       "website": "https://idev.games/",
       "description": "Participate on iDev Games and earn dev coins.",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra15uwstq6plhlxm3qcvh6js9sflp8vl9964f9l0mjhuv38dnjkulkq48rgfv",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "LENNYR",
+      "name": "LennyV2",
+      "contract": "terra15uwstq6plhlxm3qcvh6js9sflp8vl9964f9l0mjhuv38dnjkulkq48rgfv",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra15uwstq6plhlxm3qcvh6js9sflp8vl9964f9l0mjhuv38dnjkulkq48rgfv.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra15uwstq6plhlxm3qcvh6js9sflp8vl9964f9l0mjhuv38dnjkulkq48rgfv",
+      "website": "",
+      "description": "LennyV2",
       "verified": true,
       "tags": [
         "cw20",
@@ -794,6 +874,26 @@
       "vyntrexContract": "terra1gzs0926z2u6f2w9afk6ks4z9gkjpac00x60fy9yu903qjjz6nk9qmu5jx3",
       "website": "",
       "description": "Saiyan Squad",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1vs5xa8jr5ek5shxvqz3zyyvrexfxs0myd7gqhplmz46xldg7k7lscc8fyj",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "SKI",
+      "name": "Ski Freee",
+      "contract": "terra1vs5xa8jr5ek5shxvqz3zyyvrexfxs0myd7gqhplmz46xldg7k7lscc8fyj",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1vs5xa8jr5ek5shxvqz3zyyvrexfxs0myd7gqhplmz46xldg7k7lscc8fyj.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1vs5xa8jr5ek5shxvqz3zyyvrexfxs0myd7gqhplmz46xldg7k7lscc8fyj",
+      "website": "",
+      "description": "Ski Freee",
       "verified": true,
       "tags": [
         "cw20",
