@@ -517,6 +517,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra1wvk6r3pmj0835udwns4r5e0twsclvcyuq9ucgm",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "ampLUNC",
+      "name": "Eris Amplified LUNC",
+      "contract": "terra1wvk6r3pmj0835udwns4r5e0twsclvcyuq9ucgm",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1wvk6r3pmj0835udwns4r5e0twsclvcyuq9ucgm.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1wvk6r3pmj0835udwns4r5e0twsclvcyuq9ucgm",
+      "website": "",
+      "description": "Eris Amplified LUNC",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra1f6z0ylpshz9j0ytjcqlmyl3fmf8v7uwa7k7ar6craz247lum3wwq6jwh3u",
       "chain": "terra_classic",
       "type": "cw20",
@@ -834,6 +854,26 @@
       "vyntrexContract": "terra1zmsv8khmsrz2xj8zuhu7r7yruf5dfsyhtqyqf5lf92f2uvz6lf9sx5sr79",
       "website": "",
       "description": "Liquid",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1qqfx5jph0rsmkur2zgzyqnfucra45rtjae5vh6",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "mARKK",
+      "name": "ARK Innovation ETF",
+      "contract": "terra1qqfx5jph0rsmkur2zgzyqnfucra45rtjae5vh6",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1qqfx5jph0rsmkur2zgzyqnfucra45rtjae5vh6.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1qqfx5jph0rsmkur2zgzyqnfucra45rtjae5vh6",
+      "website": "https://www.ark-funds.com",
+      "description": "Mirror mARKK Token - ARK Innovation ETF managed by Cathie Wood",
       "verified": true,
       "tags": [
         "cw20",
