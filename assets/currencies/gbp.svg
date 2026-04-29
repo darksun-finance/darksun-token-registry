@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#1A3B8F"/>
+  <circle cx="32" cy="32" r="29" stroke="white" stroke-opacity="0.12" stroke-width="2"/>
+  <path d="M32 10C19.85 10 10 19.85 10 32C10 44.15 19.85 54 32 54C44.15 54 54 44.15 54 32C54 19.85 44.15 10 32 10Z" fill="#1A3B8F"/>
+  <mask id="m0" maskUnits="userSpaceOnUse" x="10" y="10" width="44" height="44">
+    <circle cx="32" cy="32" r="22" fill="white"/>
+  </mask>
+  <g mask="url(#m0)">
+    <path d="M10 14L26.4 24.9V10H37.6V24.9L54 14V22.2L40.4 31.2H54V32.8H40.4L54 41.8V50L37.6 39.1V54H26.4V39.1L10 50V41.8L23.6 32.8H10V31.2H23.6L10 22.2V14Z" fill="white"/>
+    <path d="M10 16.7L23.9 26H28.2L10 13.7V16.7ZM54 13.7L35.8 26H40.1L54 16.7V13.7ZM10 50.3L28.2 38H23.9L10 47.3V50.3ZM54 47.3L40.1 38H35.8L54 50.3V47.3Z" fill="#D91F3A"/>
+    <path d="M26.4 10V28.4H10V35.6H26.4V54H37.6V35.6H54V28.4H37.6V10H26.4Z" fill="white"/>
+    <path d="M28.9 10V30.9H10V33.1H28.9V54H35.1V33.1H54V30.9H35.1V10H28.9Z" fill="#D91F3A"/>
+  </g>
+</svg>
