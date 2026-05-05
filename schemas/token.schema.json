@@ -142,8 +142,7 @@
       "type": "object",
       "properties": {
         "daoCore": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "daoName": {
           "type": "string",
@@ -154,8 +153,7 @@
           "minLength": 1
         },
         "stakingContract": {
-          "type": "string",
-          "minLength": 1
+          "type": "string"
         },
         "rewardsContract": {
           "type": "string"
@@ -169,9 +167,27 @@
           "minLength": 1
         }
       },
-      "required": [
-        "daoCore",
-        "stakingContract"
+      "anyOf": [
+        {
+          "required": [
+            "daoCore"
+          ],
+          "properties": {
+            "daoCore": {
+              "minLength": 1
+            }
+          }
+        },
+        {
+          "required": [
+            "daoUrl"
+          ],
+          "properties": {
+            "daoUrl": {
+              "minLength": 1
+            }
+          }
+        }
       ],
       "additionalProperties": false
     }

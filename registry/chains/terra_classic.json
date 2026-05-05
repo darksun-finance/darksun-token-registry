@@ -640,7 +640,16 @@
       "tags": [
         "cw20",
         "token"
-      ]
+      ],
+      "daoDao": {
+        "daoCore": "terra1ugk8nh7m70wmj8l2frq9s3h68js3ph5vwtcex5ugry48x7cunyqqsgamqs",
+        "daoName": "DO DAO",
+        "daoUrl": "https://daodao.zone/dao/terra1ugk8nh7m70wmj8l2frq9s3h68js3ph5vwtcex5ugry48x7cunyqqsgamqs/home",
+        "stakingContract": "terra19uvu7err7wf4jsxr9n0hjwaj4dsnndhccgjfwf53dmqwr9zaz6kqy5lhg0",
+        "rewardsContract": "terra1k603yfqx9tgmk9cj0h44y4eje6z776h3hyy4fp40d6gukhmy3a2qhx55x9",
+        "unstakingDurationDays": 14,
+        "validatorMoniker": "DO DAO"
+      }
     },
     {
       "id": "terra_classic/cw20/terra1ljyvgw50u67r3ep7pp7qexgnsgy96fl57q0suut325ehed7eal8qwdtdq4",
