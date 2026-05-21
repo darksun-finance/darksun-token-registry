@@ -930,6 +930,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra1v0z94pr8ynzq8zmuyv3j0eraqjs4m5zpm4ptgru459y5fye2at7q0e4jtd",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "SELE",
+      "name": "Selenium",
+      "contract": "terra1v0z94pr8ynzq8zmuyv3j0eraqjs4m5zpm4ptgru459y5fye2at7q0e4jtd",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1v0z94pr8ynzq8zmuyv3j0eraqjs4m5zpm4ptgru459y5fye2at7q0e4jtd.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1v0z94pr8ynzq8zmuyv3j0eraqjs4m5zpm4ptgru459y5fye2at7q0e4jtd",
+      "website": "https://selenium.finance",
+      "description": "Selenium - As Twilight Falls, A New Crypto Era Begins. Synthetic representations of real assets",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra1vs5xa8jr5ek5shxvqz3zyyvrexfxs0myd7gqhplmz46xldg7k7lscc8fyj",
       "chain": "terra_classic",
       "type": "cw20",
