@@ -970,6 +970,46 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra1ex0hjv3wurhj4wgup4jzlzaqj4av6xqd8le4etml7rg9rs207y4s8cdvrp",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "TERRA",
+      "name": "Terraport",
+      "contract": "terra1ex0hjv3wurhj4wgup4jzlzaqj4av6xqd8le4etml7rg9rs207y4s8cdvrp",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1ex0hjv3wurhj4wgup4jzlzaqj4av6xqd8le4etml7rg9rs207y4s8cdvrp.png",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1ex0hjv3wurhj4wgup4jzlzaqj4av6xqd8le4etml7rg9rs207y4s8cdvrp",
+      "website": "",
+      "description": "DeFi platform on Terra Classic Network",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
+      "id": "terra_classic/cw20/terra1nv36kq4dpxf4d00w4mv4w095ek8kv48f54v46qduruy4fwd2dtzq2uk70j",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "TKMN",
+      "name": "TUTAN KHAMUN",
+      "contract": "terra1nv36kq4dpxf4d00w4mv4w095ek8kv48f54v46qduruy4fwd2dtzq2uk70j",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra1nv36kq4dpxf4d00w4mv4w095ek8kv48f54v46qduruy4fwd2dtzq2uk70j.jpg",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra1nv36kq4dpxf4d00w4mv4w095ek8kv48f54v46qduruy4fwd2dtzq2uk70j",
+      "website": "",
+      "description": "TKMN is The $LUNC 🌖 MEME TOKEN - They are Lunc chain tokens built to support",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra1r3eaa2tucjr3es88wzuqpgxvssqflk9cghrjmf9uneds8wljyapqwtrcp5",
       "chain": "terra_classic",
       "type": "cw20",
