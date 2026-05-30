@@ -792,6 +792,26 @@
       ]
     },
     {
+      "id": "terra_classic/cw20/terra16hl9mwp67l8xjy8hlhasmzldlmdpw963gmpj6e2em0g7xy4el2ys6kwtlt",
+      "chain": "terra_classic",
+      "type": "cw20",
+      "symbol": "LIX",
+      "name": "LuniX",
+      "contract": "terra16hl9mwp67l8xjy8hlhasmzldlmdpw963gmpj6e2em0g7xy4el2ys6kwtlt",
+      "decimals": 6,
+      "logoURI": "tokens/terra-classic/terra16hl9mwp67l8xjy8hlhasmzldlmdpw963gmpj6e2em0g7xy4el2ys6kwtlt.webp",
+      "coinmarketcapId": "",
+      "coingeckoId": "",
+      "vyntrexContract": "terra16hl9mwp67l8xjy8hlhasmzldlmdpw963gmpj6e2em0g7xy4el2ys6kwtlt",
+      "website": "",
+      "description": "LuniX",
+      "verified": true,
+      "tags": [
+        "cw20",
+        "token"
+      ]
+    },
+    {
       "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
       "chain": "terra_classic",
       "type": "cw20",
