@@ -15,6 +15,13 @@
       "https://rpc.terra-classic.hexxagon.io"
     ]
   },
+  "staking": {
+    "preferredValidator": {
+      "operatorAddress": "terravaloper1suphyxuf7xqf2tz8vcsnlferzulskjm236dn3g",
+      "moniker": "Uncode Lounge",
+      "ctaLabel": "Stake with DarkSun"
+    }
+  },
   "tokens": [
     {
       "id": "terra_classic/native/uluna",

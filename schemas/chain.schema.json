@@ -51,6 +51,34 @@
         }
       },
       "additionalProperties": false
+    },
+    "staking": {
+      "type": "object",
+      "properties": {
+        "preferredValidator": {
+          "type": "object",
+          "required": [
+            "operatorAddress",
+            "moniker"
+          ],
+          "properties": {
+            "operatorAddress": {
+              "type": "string",
+              "pattern": "^terravaloper[0-9a-z]+$"
+            },
+            "moniker": {
+              "type": "string",
+              "minLength": 1
+            },
+            "ctaLabel": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false
