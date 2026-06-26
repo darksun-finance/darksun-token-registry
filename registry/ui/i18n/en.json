@@ -1401,5 +1401,6 @@
   "yieldIntelligence": "Yield Intelligence",
   "garudaStakeFeeValue": "{fee} in addition to network fees",
   "garudaStakeFeeUnavailable": "On-chain Garuda fees are unavailable. Refresh data before staking.",
-  "garudaStakeFeeUnavailableShort": "On-chain fee unavailable"
+  "garudaStakeFeeUnavailableShort": "On-chain fee unavailable",
+  "daoDaoStakePlatformLabel": "DAO DAO staking"
 }
