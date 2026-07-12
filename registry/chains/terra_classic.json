@@ -37,6 +37,15 @@
       "website": "https://terra-classic.io",
       "x": "https://x.com/terra_money",
       "description": "Native staking and fee token of Terra Classic.",
+      "audits": [
+        {
+          "name": "Terra Security Audit",
+          "auditor": "CertiK",
+          "url": "https://v1.skynet.cdn.certik.com/projects/terra",
+          "date": "2020-09-04",
+          "scope": "Terra codebase"
+        }
+      ],
       "verified": true,
       "tags": [
         "native",
