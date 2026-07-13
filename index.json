@@ -9,7 +9,8 @@
     }
   ],
   "ui": {
-    "socials": "registry/ui/socials.json"
+    "socials": "registry/ui/socials.json",
+    "application": "registry/ui/application.json"
   },
   "sources": [
     {
