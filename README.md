@@ -153,6 +153,24 @@ Validator metadata should only contain public information.
 }
 ```
 
+### Preferred validator per chain
+
+A chain can declare the validator used by default for native staking actions:
+
+```json
+{
+  "staking": {
+    "preferredValidator": {
+      "operatorAddress": "cosmosvaloper1...",
+      "moniker": "Validator name",
+      "ctaLabel": "Stake with Validator name"
+    }
+  }
+}
+```
+
+`moniker` is required. `operatorAddress` may be omitted temporarily, but consumers must only resolve an addressless declaration when the current bonded validator set contains exactly one non-jailed validator with that moniker. A verified operator address should be added as soon as it is known.
+
 ## Assets
 
 Use repository-hosted assets whenever possible.

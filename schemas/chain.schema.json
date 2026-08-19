@@ -20,6 +20,10 @@
     "timestamp": {
       "type": "string"
     },
+    "logoURI": {
+      "type": "string",
+      "minLength": 1
+    },
     "tokens": {
       "type": "array",
       "items": {
@@ -58,13 +62,12 @@
         "preferredValidator": {
           "type": "object",
           "required": [
-            "operatorAddress",
             "moniker"
           ],
           "properties": {
             "operatorAddress": {
               "type": "string",
-              "pattern": "^terravaloper[0-9a-z]+$"
+              "pattern": "^[a-z][a-z0-9]*valoper1[0-9a-z]+$"
             },
             "moniker": {
               "type": "string",

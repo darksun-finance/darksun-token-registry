@@ -10,6 +10,14 @@
       "category": "governance"
     },
     {
+      "id": "bigbangx",
+      "name": "BigBangX",
+      "website": "https://bigbangx.org/",
+      "description": "NFT marketplace",
+      "category": "nft",
+      "status": "live"
+    },
+    {
       "id": "artemis_protocol",
       "name": "Artemis Protocol",
       "addedAt": "2026-04-08T00:00:00Z",

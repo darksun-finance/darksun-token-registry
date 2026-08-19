@@ -6,12 +6,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const root = path.resolve(__dirname, "..");
 
+const publicIndexPath = path.join(root, "index.json");
 const indexPath = path.join(root, "registry", "index.json");
 const chainsDir = path.join(root, "registry", "chains");
 const dexDir = path.join(root, "registry", "dex");
 const proposalsDir = path.join(root, "registry", "proposals");
 
 const TERRA_CONTRACT_RE = /^terra1[0-9a-z]{20,}$/;
+const VALIDATOR_OPERATOR_RE = /^[a-z][a-z0-9]*valoper1[0-9a-z]+$/;
 
 function fail(message) {
   console.error(`ERROR: ${message}`);
@@ -199,6 +201,30 @@ function validateChainNetwork(network, sourceName) {
     if (!isHttpUrl(endpoint)) {
       fail(`${sourceName}: invalid network.rpc endpoint '${endpoint}'`);
     }
+  }
+}
+
+function validateChainStaking(staking, sourceName) {
+  if (staking === undefined) return;
+  if (!staking || typeof staking !== "object" || Array.isArray(staking)) {
+    fail(`${sourceName}: top-level 'staking' must be an object`);
+    return;
+  }
+
+  const preferred = staking.preferredValidator;
+  if (preferred === undefined) return;
+  if (!preferred || typeof preferred !== "object" || Array.isArray(preferred)) {
+    fail(`${sourceName}: staking.preferredValidator must be an object`);
+    return;
+  }
+
+  const moniker = String(preferred.moniker || "").trim();
+  const operatorAddress = String(preferred.operatorAddress || "").trim();
+  if (!moniker) {
+    fail(`${sourceName}: staking.preferredValidator.moniker is required`);
+  }
+  if (operatorAddress && !VALIDATOR_OPERATOR_RE.test(operatorAddress)) {
+    fail(`${sourceName}: invalid staking.preferredValidator.operatorAddress '${operatorAddress}'`);
   }
 }
 
@@ -471,13 +497,24 @@ function validateProposalsRegistry(chainKeys, chainTokenIdentifiers) {
 }
 
 function main() {
+  if (!fs.existsSync(publicIndexPath)) {
+    fail("index.json not found");
+    return;
+  }
   if (!fs.existsSync(indexPath)) {
     fail("registry/index.json not found");
     return;
   }
 
+  const publicIndex = readJson(publicIndexPath);
   const index = readJson(indexPath);
-  if (!index) return;
+  if (!publicIndex || !index) return;
+  const publicChains = new Map(
+    (Array.isArray(publicIndex.chains) ? publicIndex.chains : []).map((entry) => [
+      String(entry?.key || "").trim(),
+      String(entry?.file || "").trim(),
+    ])
+  );
   if (!Array.isArray(index.chains) || !index.chains.length) {
     fail("registry/index.json must contain chains[]");
     return;
@@ -500,6 +537,9 @@ function main() {
       continue;
     }
     chainKeys.add(key);
+    if (publicChains.get(key) !== file) {
+      fail(`index.json and registry/index.json must declare the same file for chain '${key}'`);
+    }
 
     const normalizedKey = normalizeChain(key);
     if (!chainTokenIdentifiers.has(normalizedKey)) {
@@ -518,6 +558,7 @@ function main() {
       fail(`${file}: top-level 'chain' must be '${key}'`);
     }
     validateChainNetwork(chainDoc.network, file);
+    validateChainStaking(chainDoc.staking, file);
 
     if (!Array.isArray(chainDoc.tokens)) {
       fail(`${file}: missing tokens[]`);
@@ -530,6 +571,12 @@ function main() {
       if (identifier) {
         chainTokenIdentifiers.get(normalizedKey).add(identifier);
       }
+    }
+  }
+
+  for (const key of publicChains.keys()) {
+    if (!chainKeys.has(key)) {
+      fail(`index.json declares chain '${key}' but registry/index.json does not`);
     }
   }
 

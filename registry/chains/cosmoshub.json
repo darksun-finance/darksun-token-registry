@@ -1,0 +1,49 @@
+{
+  "chain": "cosmoshub",
+  "name": "Cosmos Hub",
+  "timestamp": "2026-08-18T00:00:00Z",
+  "logoURI": "assets/chains/cosmos.svg",
+  "network": {
+    "lcd": [
+      "https://cosmos-rest.publicnode.com",
+      "https://rest.cosmos.directory/cosmoshub",
+      "https://cosmoshub-mainnet-api.itrocket.net",
+      "https://cosmos-api.polkachu.com"
+    ],
+    "rpc": [
+      "https://cosmos-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/cosmoshub",
+      "https://cosmoshub-mainnet-rpc.itrocket.net",
+      "https://cosmos-rpc.polkachu.com"
+    ]
+  },
+  "staking": {
+    "preferredValidator": {
+      "operatorAddress": "cosmosvaloper1rjujxmsdk3n7hj07q54huh4esf4v0ts8mezqam",
+      "moniker": "DELIGHT",
+      "ctaLabel": "Stake with DELIGHT"
+    }
+  },
+  "tokens": [
+    {
+      "id": "cosmoshub/native/uatom",
+      "chain": "cosmoshub",
+      "type": "native",
+      "symbol": "ATOM",
+      "name": "Cosmos Hub Atom",
+      "denom": "uatom",
+      "decimals": 6,
+      "logoURI": "assets/chains/cosmos.svg",
+      "coinmarketcapId": "3794",
+      "coingeckoId": "cosmos",
+      "website": "https://cosmos.network/",
+      "description": "Native staking, governance, and fee token of Cosmos Hub.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance"
+      ]
+    }
+  ]
+}
