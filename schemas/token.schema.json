@@ -22,7 +22,8 @@
     "chain": {
       "type": "string",
       "enum": [
-        "terra_classic"
+        "terra_classic",
+        "cosmoshub"
       ]
     },
     "type": {
