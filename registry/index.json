@@ -17,6 +17,7 @@
     "socials": "registry/ui/socials.json",
     "application": "registry/ui/application.json"
   },
+  "payments": "registry/payments/plans.json",
   "protocols": [
     {
       "chain": "terra_classic",

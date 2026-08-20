@@ -1,6 +1,15 @@
 {
   "application": {
-    "channel": "Alpha",
-    "version": "0.9.4"
+    "channel": "Core",
+    "version": "1.0.1"
+  },
+  "accessPlan": {
+    "freeWalletLimit": 3,
+    "ltkMinimum": 10000,
+    "eligibilityToken": {
+      "symbol": "LTK",
+      "chain": "terra_classic",
+      "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a"
+    }
   }
 }

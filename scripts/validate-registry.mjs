@@ -11,8 +11,11 @@ const indexPath = path.join(root, "registry", "index.json");
 const chainsDir = path.join(root, "registry", "chains");
 const dexDir = path.join(root, "registry", "dex");
 const proposalsDir = path.join(root, "registry", "proposals");
+const applicationConfigPath = path.join(root, "registry", "ui", "application.json");
+const paymentsConfigPath = path.join(root, "registry", "payments", "plans.json");
 
 const TERRA_CONTRACT_RE = /^terra1[0-9a-z]{20,}$/;
+const BECH32_ADDRESS_RE = /^[a-z][a-z0-9]{1,30}1[0-9a-z]{20,}$/;
 const VALIDATOR_OPERATOR_RE = /^[a-z][a-z0-9]*valoper1[0-9a-z]+$/;
 
 function fail(message) {
@@ -384,6 +387,15 @@ function validateProposalFile(filePath, chainKeys, chainTokenIdentifiers) {
       fail(`${sourceName}: blockchains '${row?.key}' is not declared in registry/index.json`);
     }
 
+    const escrowContract = String(row?.escrowContract || "").trim();
+    const escrowRecipient = String(row?.escrowRecipient || "").trim();
+    if (!BECH32_ADDRESS_RE.test(escrowContract)) {
+      fail(`${sourceName}: blockchains '${row?.key}' escrowContract '${escrowContract}' is not a valid bech32 address`);
+    }
+    if (!BECH32_ADDRESS_RE.test(escrowRecipient)) {
+      fail(`${sourceName}: blockchains '${row?.key}' escrowRecipient '${escrowRecipient}' is not a valid bech32 address`);
+    }
+
     const acceptedKeys = Array.isArray(row?.acceptedPaymentAssetKeys) ? row.acceptedPaymentAssetKeys : [];
     for (const item of acceptedKeys) {
       const resolved = resolveProposalAssetValue(item, paymentAssetByKey, paymentAssetIdentifiers);
@@ -496,6 +508,169 @@ function validateProposalsRegistry(chainKeys, chainTokenIdentifiers) {
   }
 }
 
+function validateApplicationConfig(chainKeys, chainTokenIdentifiers) {
+  if (!fs.existsSync(applicationConfigPath)) {
+    fail("registry/ui/application.json not found");
+    return;
+  }
+  const sourceName = path.relative(root, applicationConfigPath);
+  const payload = readJson(applicationConfigPath);
+  if (!payload) return;
+  const accessPlan = payload?.accessPlan;
+  if (!accessPlan || typeof accessPlan !== "object" || Array.isArray(accessPlan)) {
+    fail(`${sourceName}: accessPlan must be an object`);
+    return;
+  }
+  if (!Number.isInteger(accessPlan.freeWalletLimit) || accessPlan.freeWalletLimit < 1 || accessPlan.freeWalletLimit > 1_000) {
+    fail(`${sourceName}: accessPlan.freeWalletLimit must be an integer in range [1, 1000]`);
+  }
+  if (!Number.isFinite(accessPlan.ltkMinimum) || accessPlan.ltkMinimum < 1 || accessPlan.ltkMinimum > 1_000_000_000_000) {
+    fail(`${sourceName}: accessPlan.ltkMinimum must be a number in range [1, 1000000000000]`);
+  }
+  const token = accessPlan.eligibilityToken;
+  if (!token || typeof token !== "object" || Array.isArray(token)) {
+    fail(`${sourceName}: accessPlan.eligibilityToken must be an object`);
+    return;
+  }
+  const chain = normalizeChain(token.chain);
+  const contract = String(token.contract || "").trim();
+  if (!String(token.symbol || "").trim()) {
+    fail(`${sourceName}: accessPlan.eligibilityToken.symbol is required`);
+  }
+  if (!Array.from(chainKeys).some((key) => normalizeChain(key) === chain)) {
+    fail(`${sourceName}: accessPlan.eligibilityToken.chain '${token.chain || ""}' is not declared in registry/index.json`);
+  }
+  if (!TERRA_CONTRACT_RE.test(contract)) {
+    fail(`${sourceName}: accessPlan.eligibilityToken.contract '${contract}' is not a valid Terra contract`);
+  } else if (!assetExistsOnChain(chainTokenIdentifiers, chain, contract)) {
+    fail(`${sourceName}: accessPlan.eligibilityToken.contract '${contract}' is not listed in the '${token.chain}' token registry`);
+  }
+}
+
+function validatePaymentsConfig(chainKeys, chainTokenIdentifiers, tokenIds) {
+  if (!fs.existsSync(paymentsConfigPath)) {
+    fail("registry/payments/plans.json not found");
+    return;
+  }
+  const sourceName = path.relative(root, paymentsConfigPath);
+  const payload = readJson(paymentsConfigPath);
+  if (!payload) return;
+  if (!Number.isInteger(payload.schemaVersion) || payload.schemaVersion < 1) {
+    fail(`${sourceName}: schemaVersion must be a positive integer`);
+  }
+  const plans = payload?.plans;
+  if (!plans || typeof plans !== "object" || Array.isArray(plans) || !Object.keys(plans).length) {
+    fail(`${sourceName}: plans must be a non-empty object`);
+    return;
+  }
+  for (const [planKey, plan] of Object.entries(plans)) {
+    if (!/^[a-z0-9_]+$/.test(planKey)) {
+      fail(`${sourceName}: invalid plan key '${planKey}'`);
+    }
+    if (!String(plan?.label || "").trim()) {
+      fail(`${sourceName}: plan '${planKey}' requires a label`);
+    }
+    if (!Number.isInteger(plan?.priceUsdCents) || plan.priceUsdCents < 1 || plan.priceUsdCents > 100_000_000) {
+      fail(`${sourceName}: plan '${planKey}' priceUsdCents must be an integer in range [1, 100000000]`);
+    }
+    if (!Number.isInteger(plan?.durationDays) || plan.durationDays < 1 || plan.durationDays > 3_650) {
+      fail(`${sourceName}: plan '${planKey}' durationDays must be an integer in range [1, 3650]`);
+    }
+  }
+
+  if (!Array.isArray(payload.routes) || !payload.routes.length) {
+    fail(`${sourceName}: routes must be a non-empty array`);
+    return;
+  }
+  const routeKeys = new Set();
+  for (const route of payload.routes) {
+    const routeKey = String(route?.key || "").trim();
+    const chain = normalizeChain(route?.chain);
+    const planKey = String(route?.planKey || "").trim();
+    const asset = route?.paymentAsset;
+    const settlement = route?.settlement;
+    const quotePolicy = route?.quotePolicy;
+    if (!/^[a-z0-9_]+$/.test(routeKey)) {
+      fail(`${sourceName}: invalid payment route key '${routeKey}'`);
+    } else if (routeKeys.has(routeKey)) {
+      fail(`${sourceName}: duplicated payment route key '${routeKey}'`);
+    }
+    routeKeys.add(routeKey);
+    if (typeof route?.enabled !== "boolean") {
+      fail(`${sourceName}: route '${routeKey}' enabled must be a boolean`);
+    }
+    if (!Array.from(chainKeys).some((key) => normalizeChain(key) === chain)) {
+      fail(`${sourceName}: route '${routeKey}' chain '${route?.chain || ""}' is not declared in registry/index.json`);
+    }
+    if (!plans[planKey]) {
+      fail(`${sourceName}: route '${routeKey}' references unknown plan '${planKey}'`);
+    }
+    if (!asset || typeof asset !== "object" || Array.isArray(asset)) {
+      fail(`${sourceName}: route '${routeKey}' paymentAsset must be an object`);
+      continue;
+    }
+    const assetId = String(asset.id || "").trim();
+    const assetType = String(asset.type || "").trim().toLowerCase();
+    const assetContract = String(asset.contract || "").trim();
+    const assetDenom = String(asset.denom || "").trim();
+    if (!tokenIds.has(assetId)) {
+      fail(`${sourceName}: route '${routeKey}' payment asset id '${assetId}' is not declared in the token registry`);
+    }
+    if (!String(asset.symbol || "").trim()) {
+      fail(`${sourceName}: route '${routeKey}' paymentAsset.symbol is required`);
+    }
+    if (!["cw20", "native", "ibc"].includes(assetType)) {
+      fail(`${sourceName}: route '${routeKey}' has unsupported payment asset type '${assetType}'`);
+    }
+    if (!Number.isInteger(asset.decimals) || asset.decimals < 0 || asset.decimals > 30) {
+      fail(`${sourceName}: route '${routeKey}' paymentAsset.decimals must be an integer in range [0, 30]`);
+    }
+    const paymentAssetIdentifier = assetType === "cw20" ? assetContract : assetDenom;
+    if (assetType === "cw20" && !BECH32_ADDRESS_RE.test(assetContract)) {
+      fail(`${sourceName}: route '${routeKey}' paymentAsset.contract '${assetContract}' is not a valid bech32 contract`);
+    } else if (assetType !== "cw20" && !assetDenom) {
+      fail(`${sourceName}: route '${routeKey}' paymentAsset.denom is required for '${assetType}' assets`);
+    } else if (!assetExistsOnChain(chainTokenIdentifiers, chain, paymentAssetIdentifier)) {
+      fail(`${sourceName}: route '${routeKey}' payment asset '${paymentAssetIdentifier}' is not listed for '${route?.chain}'`);
+    }
+    if (!settlement || typeof settlement !== "object" || Array.isArray(settlement)) {
+      fail(`${sourceName}: route '${routeKey}' settlement must be an object`);
+    } else {
+      const mode = String(settlement.mode || "").trim();
+      const recipient = String(settlement.recipient || "").trim();
+      const paymentContract = String(settlement.contract || "").trim();
+      if (!["direct_treasury", "payment_contract_forward"].includes(mode)) {
+        fail(`${sourceName}: route '${routeKey}' has unsupported settlement mode '${mode}'`);
+      }
+      if (!String(settlement.recipientKind || "").trim()) {
+        fail(`${sourceName}: route '${routeKey}' settlement.recipientKind is required`);
+      }
+      if (!BECH32_ADDRESS_RE.test(recipient)) {
+        fail(`${sourceName}: route '${routeKey}' settlement recipient '${recipient}' is not a valid bech32 address`);
+      }
+      if (mode === "payment_contract_forward" && !BECH32_ADDRESS_RE.test(paymentContract)) {
+        fail(`${sourceName}: route '${routeKey}' settlement.contract '${paymentContract}' is not a valid bech32 address`);
+      }
+    }
+    if (!quotePolicy || typeof quotePolicy !== "object" || Array.isArray(quotePolicy)) {
+      fail(`${sourceName}: route '${routeKey}' quotePolicy must be an object`);
+    } else {
+      if (String(quotePolicy.currency || "").trim().toUpperCase() !== "USD") {
+        fail(`${sourceName}: route '${routeKey}' quotePolicy.currency must be USD`);
+      }
+      if (!Number.isInteger(quotePolicy.ttlSeconds) || quotePolicy.ttlSeconds < 30 || quotePolicy.ttlSeconds > 3_600) {
+        fail(`${sourceName}: route '${routeKey}' quotePolicy.ttlSeconds must be an integer in range [30, 3600]`);
+      }
+      if (!Number.isInteger(quotePolicy.maxPriceAgeSeconds) || quotePolicy.maxPriceAgeSeconds < 30 || quotePolicy.maxPriceAgeSeconds > 3_600) {
+        fail(`${sourceName}: route '${routeKey}' quotePolicy.maxPriceAgeSeconds must be an integer in range [30, 3600]`);
+      }
+      if (quotePolicy.allowStalePrice !== false) {
+        fail(`${sourceName}: route '${routeKey}' quotePolicy.allowStalePrice must be false`);
+      }
+    }
+  }
+}
+
 function main() {
   if (!fs.existsSync(publicIndexPath)) {
     fail("index.json not found");
@@ -582,6 +757,8 @@ function main() {
 
   validateDexRegistry(chainKeys);
   validateProposalsRegistry(chainKeys, chainTokenIdentifiers);
+  validateApplicationConfig(chainKeys, chainTokenIdentifiers);
+  validatePaymentsConfig(chainKeys, chainTokenIdentifiers, ids);
 
   if (process.exitCode) return;
   console.log("Registry validation passed.");

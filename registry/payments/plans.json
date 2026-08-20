@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "plans": {
+    "annual_unlimited": {
+      "label": "DarkSun Unlimited",
+      "priceUsdCents": 2999,
+      "durationDays": 365
+    }
+  },
+  "routes": [
+    {
+      "key": "terra_classic_ltk",
+      "enabled": true,
+      "chain": "terra_classic",
+      "planKey": "annual_unlimited",
+      "paymentAsset": {
+        "id": "terra_classic/cw20/terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+        "symbol": "LTK",
+        "type": "cw20",
+        "contract": "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a",
+        "decimals": 6
+      },
+      "settlement": {
+        "mode": "payment_contract_forward",
+        "contract": "terra1ae6x9xtzm6yg759ald8ucwtrwmx2agzjdj0w5t9lwq2l98jfu3vs7ngyp8",
+        "recipientKind": "dao_dao_core",
+        "recipient": "terra1daq9lmrerukgset9skj2zvnedpsszxnvwn2g3y68x3z9nnja2pcqv9sa78"
+      },
+      "quotePolicy": {
+        "currency": "USD",
+        "ttlSeconds": 300,
+        "maxPriceAgeSeconds": 300,
+        "allowStalePrice": false
+      }
+    }
+  ]
+}

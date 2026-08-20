@@ -17,6 +17,10 @@ The registry may include:
 
 Everything committed here must be safe to publish publicly.
 
+The public DarkSun access-plan thresholds live in `registry/ui/application.json`. DarkSun validates these values server-side and keeps deployment configuration as a fallback when the registry is temporarily unavailable.
+
+Annual plan pricing and blockchain-specific settlement routes live in `registry/payments/plans.json`. Each route binds one registered payment asset to one public treasury recipient and, for contract-backed settlement, to one deployed payment-contract address.
+
 ## Public-Only Policy
 
 This repository is public-facing configuration.
@@ -72,7 +76,9 @@ Important paths:
 - `registry/chains/<chain>.json`: chain metadata, public endpoints, token list references
 - `registry/dex/<chain>.json`: DEX metadata and public contracts
 - `registry/farms/<chain>.json`: farm metadata
-- `registry/proposals/<chain>.json`: public proposal funding configuration
+- `registry/payments/plans.json`: annual plans and blockchain-specific payment routes
+- `registry/proposals/<chain>.json`: public proposal funding configuration, including the escrow contract and final treasury recipient for each chain
+- `registry/ui/application.json`: public application release and access-plan configuration
 - `registry/validators/<chain>.json`: validator metadata such as moniker, website, logo
 - `assets/validators/`: validator logo files
 - `tokens/<chain>/`: token logos and token-specific assets
