@@ -1,10 +1,10 @@
 {
   "application": {
-    "channel": "Core",
-    "version": "1.0.1"
+    "channel": "",
+    "version": "1.1.0"
   },
   "accessPlan": {
-    "freeWalletLimit": 3,
+    "freeWalletLimit": 10,
     "ltkMinimum": 10000,
     "eligibilityToken": {
       "symbol": "LTK",
