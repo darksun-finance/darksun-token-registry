@@ -23,7 +23,8 @@
         "ltk"
       ],
       "defaultPaymentAssetKey": "usdc_axl",
-      "escrowRecipient": "terra12qtj82wzfas0jl4ptuz0lmw8qzhu30jka6g5fq",
+      "escrowContract": "terra1n844t4pukr2td8l04gatp8m0n9xvh09yaf2pv5cjqph55pr0hjnqm8aspa",
+      "escrowRecipient": "terra1daq9lmrerukgset9skj2zvnedpsszxnvwn2g3y68x3z9nnja2pcqv9sa78",
       "acceptedPaymentAssetRefs": [
         "ibc/0BB9D8513E8E8E9AE6A9D211D9136E6DA42288DDE6CFAA453A150A4566054DC5",
         "terra1mm8tdp40r2slzwqxk8jsz66ayc4zp69muxeateq37x2xquttzsaqy7275a"
