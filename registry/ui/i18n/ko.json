@@ -421,6 +421,7 @@
   "anomalyVolumeSpikeHelp": "추적된 시장의 일중 거래량 변화.",
   "aprDelta": "APR 델타",
   "aprObservedUnavailable": "APR을(를) 사용할 수 없습니다",
+  "asOfNow": "현재 기준",
   "astroportDesc": "DEX와 유동성",
   "auditsSecurity": "감사 및 보안",
   "authOnlyWalletModalStatus": "계속하려면 Keplr, Galaxy Station 또는 Terra Station을 사용하세요.",

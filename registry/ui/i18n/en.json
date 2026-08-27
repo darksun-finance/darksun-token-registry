@@ -421,6 +421,7 @@
   "anomalyVolumeSpikeHelp": "Intraday volume variation on the tracked market.",
   "aprDelta": "APR Delta",
   "aprObservedUnavailable": "APR unavailable",
+  "asOfNow": "As of now",
   "astroportDesc": "DEX and liquidity",
   "auditsSecurity": "Audits & Security",
   "authOnlyWalletModalStatus": "Use Keplr, Galaxy Station, or Terra Station to continue.",
