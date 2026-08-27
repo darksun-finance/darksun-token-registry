@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#F8FAFC"/>
+  <circle cx="32" cy="32" r="29" stroke="black" stroke-opacity="0.08" stroke-width="2"/>
+  <mask id="flag-pt" maskUnits="userSpaceOnUse" x="10" y="10" width="44" height="44">
+    <circle cx="32" cy="32" r="22" fill="white"/>
+  </mask>
+  <g mask="url(#flag-pt)">
+    <rect x="10" y="10" width="44" height="44" fill="#009C3B"/>
+    <polygon points="32,15 50,32 32,49 14,32" fill="#FFDF00"/>
+    <circle cx="32" cy="32" r="9" fill="#002776"/>
+    <path d="M23.8 29.2C28.7 28.1 35.8 29.1 40.2 33.1" stroke="white" stroke-width="1.5" fill="none"/>
+  </g>
+</svg>
