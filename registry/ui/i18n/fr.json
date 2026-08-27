@@ -2119,7 +2119,7 @@
   "walletProviderKeplr": "Keplr",
   "walletProviderNoCompatibleChains": "Aucune blockchain active compatible avec {provider}.",
   "walletProviderOWallet": "OWallet",
-  "walletProviderScopeAll": "Keplr, OWallet, WalletConnect et Galaxy Station peuvent connecter une adresse distincte sur chaque blockchain active compatible, dans la limite des emplacements disponibles : {chains}. Terra Station reste limité à Terra Classic.",
+  "walletProviderScopeAll": "Blockchains actives : {chains}. Chaque fournisseur connecte uniquement les réseaux affichés sur sa carte. MetaMask standard est limité aux réseaux EVM ; Terra Station reste limité à Terra Classic.",
   "walletProviderScopeChain": "Les fournisseurs affichés se connecteront uniquement à {chain}.",
   "walletProviderStation": "Terra Station",
   "walletProviderWalletConnect": "WalletConnect",

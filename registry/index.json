@@ -21,6 +21,16 @@
       "key": "injective",
       "name": "Injective",
       "file": "registry/chains/injective.json"
+    },
+    {
+      "key": "bnb",
+      "name": "BNB Smart Chain",
+      "file": "registry/chains/bnb.json"
+    },
+    {
+      "key": "ethereum",
+      "name": "Ethereum",
+      "file": "registry/chains/ethereum.json"
     }
   ],
   "ui": {

@@ -1,0 +1,37 @@
+{
+  "chain": "ethereum",
+  "name": "Ethereum",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "logoURI": "assets/chains/ethereum.svg",
+  "network": {
+    "namespace": "eip155",
+    "chainId": "1",
+    "lcd": [],
+    "rpc": [
+      "https://ethereum-rpc.publicnode.com",
+      "https://public.1rpc.io/eth"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "ethereum/native/eth",
+      "chain": "ethereum",
+      "type": "native",
+      "symbol": "ETH",
+      "name": "Ether",
+      "denom": "ETH",
+      "decimals": 18,
+      "logoURI": "assets/chains/ethereum.svg",
+      "coinmarketcapId": "1027",
+      "coingeckoId": "ethereum",
+      "website": "https://ethereum.org/",
+      "description": "Native gas and value-transfer asset of Ethereum Mainnet.",
+      "verified": true,
+      "tags": [
+        "native",
+        "evm",
+        "gas"
+      ]
+    }
+  ]
+}

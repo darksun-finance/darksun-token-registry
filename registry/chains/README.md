@@ -9,6 +9,7 @@ Typical chain metadata includes:
 - chain name and display metadata
 - public LCD / REST endpoints
 - public RPC endpoints
+- CAIP namespace and decimal chain ID for EVM networks
 - public explorer and ecosystem links
 - token references for the chain
 
@@ -46,6 +47,7 @@ Check that:
 - token references point to valid identifiers and assets
 - the data remains chain-specific where needed
 - the file still matches the schema
+- EVM networks use `network.namespace: "eip155"`, include `network.chainId`, and may leave `network.lcd` empty
 
 ## Validation
 

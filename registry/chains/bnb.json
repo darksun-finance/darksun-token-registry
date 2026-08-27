@@ -1,0 +1,37 @@
+{
+  "chain": "bnb",
+  "name": "BNB Smart Chain",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "logoURI": "assets/chains/bnb-chain.svg",
+  "network": {
+    "namespace": "eip155",
+    "chainId": "56",
+    "lcd": [],
+    "rpc": [
+      "https://bsc-dataseed.bnbchain.org",
+      "https://bsc-dataseed-public.bnbchain.org"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "bnb/native/bnb",
+      "chain": "bnb",
+      "type": "native",
+      "symbol": "BNB",
+      "name": "BNB",
+      "denom": "BNB",
+      "decimals": 18,
+      "logoURI": "assets/chains/bnb-chain.svg",
+      "coinmarketcapId": "1839",
+      "coingeckoId": "binancecoin",
+      "website": "https://www.bnbchain.org/",
+      "description": "Native gas and value-transfer asset of BNB Smart Chain.",
+      "verified": true,
+      "tags": [
+        "native",
+        "evm",
+        "gas"
+      ]
+    }
+  ]
+}

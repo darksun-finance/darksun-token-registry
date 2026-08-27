@@ -187,8 +187,14 @@ function validateChainNetwork(network, sourceName) {
 
   const lcd = Array.isArray(network.lcd) ? network.lcd : [];
   const rpc = Array.isArray(network.rpc) ? network.rpc : [];
+  const namespace = String(network.namespace || "cosmos").trim().toLowerCase();
 
-  if (!lcd.length) {
+  if (namespace === "eip155") {
+    const chainId = String(network.chainId || "").trim();
+    if (!/^\d+$/.test(chainId) || BigInt(chainId || "0") <= 0n) {
+      fail(`${sourceName}: EVM network.chainId must be a positive decimal chain id`);
+    }
+  } else if (!lcd.length) {
     fail(`${sourceName}: network.lcd must contain at least one endpoint`);
   }
   if (!rpc.length) {
@@ -203,6 +209,8 @@ function validateChainNetwork(network, sourceName) {
   for (const endpoint of rpc) {
     if (!isHttpUrl(endpoint)) {
       fail(`${sourceName}: invalid network.rpc endpoint '${endpoint}'`);
+    } else if (namespace === "eip155" && !String(endpoint).trim().toLowerCase().startsWith("https://")) {
+      fail(`${sourceName}: EVM network.rpc endpoints must use HTTPS`);
     }
   }
 }
