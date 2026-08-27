@@ -1,6 +1,6 @@
 {
   "name": "DarkSun Token Registry",
-  "timestamp": "2026-08-18T00:00:00Z",
+  "timestamp": "2026-08-27T00:00:00Z",
   "chains": [
     {
       "key": "terra_classic",
@@ -11,6 +11,16 @@
       "key": "cosmoshub",
       "name": "Cosmos Hub",
       "file": "registry/chains/cosmoshub.json"
+    },
+    {
+      "key": "osmosis",
+      "name": "Osmosis",
+      "file": "registry/chains/osmosis.json"
+    },
+    {
+      "key": "injective",
+      "name": "Injective",
+      "file": "registry/chains/injective.json"
     }
   ],
   "ui": {

@@ -1,0 +1,42 @@
+{
+  "chain": "osmosis",
+  "name": "Osmosis",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "logoURI": "assets/chains/osmosis.svg",
+  "network": {
+    "lcd": [
+      "https://osmosis-rest.publicnode.com",
+      "https://rest.cosmos.directory/osmosis",
+      "https://osmosis-api.polkachu.com",
+      "https://osmosis-api.stake-town.com"
+    ],
+    "rpc": [
+      "https://osmosis-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/osmosis",
+      "https://osmosis-rpc.polkachu.com",
+      "https://osmosis-rpc.stake-town.com"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "osmosis/native/uosmo",
+      "chain": "osmosis",
+      "type": "native",
+      "symbol": "OSMO",
+      "name": "Osmosis",
+      "denom": "uosmo",
+      "decimals": 6,
+      "logoURI": "assets/chains/osmosis.svg",
+      "coinmarketcapId": "12220",
+      "coingeckoId": "osmosis",
+      "website": "https://osmosis.zone/",
+      "description": "Native staking, governance, and fee token of Osmosis.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance"
+      ]
+    }
+  ]
+}

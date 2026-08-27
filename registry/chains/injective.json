@@ -1,0 +1,41 @@
+{
+  "chain": "injective",
+  "name": "Injective",
+  "timestamp": "2026-08-27T00:00:00Z",
+  "logoURI": "assets/chains/injective.svg",
+  "network": {
+    "lcd": [
+      "https://sentry.lcd.injective.network:443",
+      "https://injective-rest.publicnode.com",
+      "https://rest.cosmos.directory/injective",
+      "https://injective-api.polkachu.com"
+    ],
+    "rpc": [
+      "https://sentry.tm.injective.network:443",
+      "https://injective-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/injective",
+      "https://injective-rpc.polkachu.com"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "injective/native/inj",
+      "chain": "injective",
+      "type": "native",
+      "symbol": "INJ",
+      "name": "Injective",
+      "denom": "inj",
+      "decimals": 18,
+      "logoURI": "assets/chains/injective.svg",
+      "coingeckoId": "injective-protocol",
+      "website": "https://injective.com/",
+      "description": "Native staking, governance, and fee token of Injective.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance"
+      ]
+    }
+  ]
+}
