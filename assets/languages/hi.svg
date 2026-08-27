@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#F8FAFC"/>
+  <circle cx="32" cy="32" r="29" stroke="black" stroke-opacity="0.08" stroke-width="2"/>
+  <mask id="flag-hi" maskUnits="userSpaceOnUse" x="10" y="10" width="44" height="44">
+    <circle cx="32" cy="32" r="22" fill="white"/>
+  </mask>
+  <g mask="url(#flag-hi)">
+    <rect x="10" y="10" width="44" height="14.6667" fill="#FF9933"/>
+    <rect x="10" y="24.6667" width="44" height="14.6667" fill="#FFFFFF"/>
+    <rect x="10" y="39.3334" width="44" height="14.6666" fill="#138808"/>
+    <circle cx="32" cy="32" r="5" stroke="#000080" stroke-width="1"/>
+    <circle cx="32" cy="32" r="1" fill="#000080"/>
+    <path d="M32 27V37M27 32H37M28.46 28.46L35.54 35.54M35.54 28.46L28.46 35.54" stroke="#000080" stroke-width="0.65"/>
+  </g>
+</svg>
