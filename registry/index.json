@@ -1,11 +1,16 @@
 {
   "name": "DarkSun Token Registry",
-  "timestamp": "2026-08-27T00:00:00Z",
+  "timestamp": "2026-08-28T00:00:00Z",
   "chains": [
     {
       "key": "terra_classic",
       "name": "Terra Classic",
       "file": "registry/chains/terra_classic.json"
+    },
+    {
+      "key": "terra2",
+      "name": "Terra 2.0",
+      "file": "registry/chains/terra2.json"
     },
     {
       "key": "cosmoshub",

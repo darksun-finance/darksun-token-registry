@@ -1,0 +1,40 @@
+{
+  "chain": "terra2",
+  "name": "Terra 2.0",
+  "timestamp": "2026-08-28T00:00:00Z",
+  "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg",
+  "network": {
+    "lcd": [
+      "https://terra-rest.publicnode.com",
+      "https://phoenix-lcd.terra.dev",
+      "https://rest.cosmos.directory/terra2",
+      "https://terra-api.polkachu.com"
+    ],
+    "rpc": [
+      "https://terra-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/terra2",
+      "https://terra-rpc.polkachu.com"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "terra2/native/uluna",
+      "chain": "terra2",
+      "type": "native",
+      "symbol": "LUNA",
+      "name": "Terra Luna",
+      "denom": "uluna",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/terra2/images/luna.svg",
+      "coingeckoId": "terra-luna-2",
+      "website": "https://www.phoenix.money/",
+      "description": "Native staking, governance, and fee token of the Terra phoenix-1 network.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance"
+      ]
+    }
+  ]
+}
