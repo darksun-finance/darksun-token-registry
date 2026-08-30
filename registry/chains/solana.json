@@ -1,0 +1,38 @@
+{
+  "chain": "solana",
+  "name": "Solana",
+  "timestamp": "2026-08-30T00:00:00Z",
+  "logoURI": "assets/chains/solana.svg",
+  "network": {
+    "namespace": "solana",
+    "chainId": "mainnet-beta",
+    "genesisHash": "5eykt4UsFv8P8NJdTREpY1vzqKqZKvdp",
+    "lcd": [],
+    "rpc": [
+      "https://api.mainnet-beta.solana.com"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "solana/native/sol",
+      "chain": "solana",
+      "type": "native",
+      "symbol": "SOL",
+      "name": "Solana",
+      "denom": "lamports",
+      "decimals": 9,
+      "logoURI": "assets/chains/solana.svg",
+      "coinmarketcapId": "5426",
+      "coingeckoId": "solana",
+      "website": "https://solana.com/",
+      "description": "Native gas, staking, and value-transfer asset of Solana Mainnet.",
+      "verified": true,
+      "tags": [
+        "native",
+        "solana",
+        "gas",
+        "staking"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "chain": "nibiru",
+  "name": "Nibiru",
+  "timestamp": "2026-08-30T00:00:00Z",
+  "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/nibiru/images/nibiru.svg",
+  "network": {
+    "lcd": [
+      "https://lcd.nibiru.fi",
+      "https://nibiru-rest.publicnode.com",
+      "https://rest.cosmos.directory/nibiru",
+      "https://nibiru-api.polkachu.com"
+    ],
+    "rpc": [
+      "https://rpc.nibiru.fi",
+      "https://nibiru-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/nibiru",
+      "https://nibiru-rpc.polkachu.com"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "nibiru/native/unibi",
+      "chain": "nibiru",
+      "type": "native",
+      "symbol": "NIBI",
+      "name": "Nibiru",
+      "denom": "unibi",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/nibiru/images/nibiru.svg",
+      "coingeckoId": "nibiru",
+      "website": "https://nibiru.fi/",
+      "description": "Native staking, governance, and fee token of the Nibiru cataclysm-1 Cosmos network.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance",
+        "cosmwasm"
+      ]
+    }
+  ]
+}

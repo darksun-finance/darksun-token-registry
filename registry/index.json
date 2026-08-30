@@ -1,6 +1,6 @@
 {
   "name": "DarkSun Token Registry",
-  "timestamp": "2026-08-28T00:00:00Z",
+  "timestamp": "2026-08-30T00:00:00Z",
   "chains": [
     {
       "key": "terra_classic",
@@ -28,6 +28,16 @@
       "file": "registry/chains/injective.json"
     },
     {
+      "key": "juno",
+      "name": "Juno",
+      "file": "registry/chains/juno.json"
+    },
+    {
+      "key": "nibiru",
+      "name": "Nibiru",
+      "file": "registry/chains/nibiru.json"
+    },
+    {
       "key": "bnb",
       "name": "BNB Smart Chain",
       "file": "registry/chains/bnb.json"
@@ -36,6 +46,11 @@
       "key": "ethereum",
       "name": "Ethereum",
       "file": "registry/chains/ethereum.json"
+    },
+    {
+      "key": "solana",
+      "name": "Solana",
+      "file": "registry/chains/solana.json"
     }
   ],
   "ui": {

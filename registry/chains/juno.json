@@ -1,0 +1,42 @@
+{
+  "chain": "juno",
+  "name": "Juno",
+  "timestamp": "2026-08-30T00:00:00Z",
+  "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg",
+  "network": {
+    "lcd": [
+      "https://juno-rest.publicnode.com",
+      "https://rest.cosmos.directory/juno",
+      "https://juno-api.polkachu.com",
+      "https://rest.lavenderfive.com:443/juno"
+    ],
+    "rpc": [
+      "https://juno-rpc.publicnode.com",
+      "https://rpc.cosmos.directory/juno",
+      "https://juno-rpc.polkachu.com",
+      "https://rpc.lavenderfive.com:443/juno"
+    ]
+  },
+  "tokens": [
+    {
+      "id": "juno/native/ujuno",
+      "chain": "juno",
+      "type": "native",
+      "symbol": "JUNO",
+      "name": "Juno",
+      "denom": "ujuno",
+      "decimals": 6,
+      "logoURI": "https://raw.githubusercontent.com/cosmos/chain-registry/master/juno/images/juno.svg",
+      "coingeckoId": "juno-network",
+      "website": "https://www.junonetwork.io/",
+      "description": "Native staking, governance, and fee token of the Juno juno-1 network.",
+      "verified": true,
+      "tags": [
+        "native",
+        "staking",
+        "governance",
+        "cosmwasm"
+      ]
+    }
+  ]
+}

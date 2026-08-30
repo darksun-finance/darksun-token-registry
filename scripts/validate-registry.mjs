@@ -194,6 +194,15 @@ function validateChainNetwork(network, sourceName) {
     if (!/^\d+$/.test(chainId) || BigInt(chainId || "0") <= 0n) {
       fail(`${sourceName}: EVM network.chainId must be a positive decimal chain id`);
     }
+  } else if (namespace === "solana") {
+    const chainId = String(network.chainId || "").trim();
+    const genesisHash = String(network.genesisHash || "").trim();
+    if (!chainId) {
+      fail(`${sourceName}: Solana network.chainId is required`);
+    }
+    if (!genesisHash) {
+      fail(`${sourceName}: Solana network.genesisHash is required`);
+    }
   } else if (!lcd.length) {
     fail(`${sourceName}: network.lcd must contain at least one endpoint`);
   }

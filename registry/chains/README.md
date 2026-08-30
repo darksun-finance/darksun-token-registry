@@ -10,6 +10,7 @@ Typical chain metadata includes:
 - public LCD / REST endpoints
 - public RPC endpoints
 - CAIP namespace and decimal chain ID for EVM networks
+- network namespace, cluster identifier, and genesis hash for Solana networks
 - public explorer and ecosystem links
 - token references for the chain
 
@@ -48,6 +49,7 @@ Check that:
 - the data remains chain-specific where needed
 - the file still matches the schema
 - EVM networks use `network.namespace: "eip155"`, include `network.chainId`, and may leave `network.lcd` empty
+- Solana networks use `network.namespace: "solana"`, include `network.chainId` and `network.genesisHash`, and may leave `network.lcd` empty
 
 ## Validation
 
