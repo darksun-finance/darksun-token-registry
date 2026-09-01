@@ -206,6 +206,18 @@ Chain files may include public application endpoints such as:
 Only include endpoints that are intended for public client use.
 Do not add private infrastructure, rate-limit bypass URLs, or internal failover endpoints.
 
+Explorer metadata uses HTTPS URL templates so clients can build account and transaction links:
+
+```json
+{
+  "explorer": {
+    "label": "Galaxy Finder",
+    "accountUrl": "https://finder.terraclassic.community/columbus-5/address/{address}",
+    "txUrl": "https://finder.terraclassic.community/columbus-5/tx/{txHash}"
+  }
+}
+```
+
 ## Validation
 
 Validate changes before opening a pull request.

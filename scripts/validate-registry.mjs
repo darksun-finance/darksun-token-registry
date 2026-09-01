@@ -224,6 +224,38 @@ function validateChainNetwork(network, sourceName) {
   }
 }
 
+function validateChainExplorer(explorer, sourceName) {
+  if (explorer === undefined) return;
+  if (!explorer || typeof explorer !== "object" || Array.isArray(explorer)) {
+    fail(`${sourceName}: top-level 'explorer' must be an object`);
+    return;
+  }
+
+  const label = String(explorer.label || "").trim();
+  const templates = [
+    ["accountUrl", "{address}"],
+    ["txUrl", "{txHash}"],
+  ];
+  if (!label) {
+    fail(`${sourceName}: explorer.label is required`);
+  }
+  for (const [field, placeholder] of templates) {
+    const template = String(explorer[field] || "").trim();
+    if (!template.includes(placeholder)) {
+      fail(`${sourceName}: explorer.${field} must include '${placeholder}'`);
+      continue;
+    }
+    try {
+      const url = new URL(template.replaceAll(placeholder, "reference"));
+      if (url.protocol !== "https:") {
+        fail(`${sourceName}: explorer.${field} must use HTTPS`);
+      }
+    } catch (_) {
+      fail(`${sourceName}: invalid explorer.${field} URL template '${template}'`);
+    }
+  }
+}
+
 function validateChainStaking(staking, sourceName) {
   if (staking === undefined) return;
   if (!staking || typeof staking !== "object" || Array.isArray(staking)) {
@@ -750,6 +782,7 @@ function main() {
       fail(`${file}: top-level 'chain' must be '${key}'`);
     }
     validateChainNetwork(chainDoc.network, file);
+    validateChainExplorer(chainDoc.explorer, file);
     validateChainStaking(chainDoc.staking, file);
 
     if (!Array.isArray(chainDoc.tokens)) {
