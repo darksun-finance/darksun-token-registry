@@ -720,6 +720,37 @@ function validatePaymentsConfig(chainKeys, chainTokenIdentifiers, tokenIds) {
   }
 }
 
+function validateNewsCatalogue(publicIndex, index, chainKeys, tokenIds) {
+  const file = "registry/news/feeds.json";
+  if (publicIndex.news !== file || index.news !== file) fail("Both indexes must reference registry/news/feeds.json");
+  if (!fs.existsSync(path.join(root, file))) { fail(`${file}: missing catalogue`); return; }
+  const payload = readJson(path.join(root, file));
+  if (payload?.version !== 1 || !Array.isArray(payload?.feeds)) { fail(`${file}: expected version 1 and feeds[]`); return; }
+  const keys = new Set();
+  for (const feed of payload.feeds) {
+    const label = `${file}: ${feed.key || "unnamed"}`;
+    if (!/^[a-z0-9-]+$/.test(feed.key || "") || keys.has(feed.key)) fail(`${label}: invalid or duplicate key`);
+    keys.add(feed.key);
+    if (!feed.name || !["rss", "atom"].includes(feed.type) || !["darksun", "media", "project"].includes(feed.publisherType)) fail(`${label}: invalid source metadata`);
+    if (typeof feed.enabled !== "boolean") fail(`${label}: enabled must be boolean`);
+    for (const key of ["feedUrl", "siteUrl", ...(feed.logoUrl ? ["logoUrl"] : [])]) {
+      try {
+        const url = new URL(feed[key]);
+        if (url.protocol !== "https:" || url.username || url.password) throw new Error();
+      } catch { fail(`${label}: ${key} must be a public HTTPS URL`); }
+    }
+    for (const [key, allowed] of [["chains", chainKeys], ["tokenIds", tokenIds]]) {
+      if (!Array.isArray(feed[key])) { fail(`${label}: ${key} must be an array`); continue; }
+      if (new Set(feed[key]).size !== feed[key].length) fail(`${label}: duplicate ${key}`);
+      for (const value of feed[key]) if (!allowed.has(value)) fail(`${label}: unknown ${key} '${value}'`);
+    }
+    if (feed.publisherType !== "darksun" && !feed.chains?.length && !feed.tokenIds?.length) fail(`${label}: external feeds require a blockchain or token target`);
+    for (const id of feed.tokenIds || []) {
+      if (feed.chains?.length && !feed.chains.includes(id.split("/")[0])) fail(`${label}: token '${id}' is outside declared chains`);
+    }
+  }
+}
+
 function main() {
   if (!fs.existsSync(publicIndexPath)) {
     fail("index.json not found");
@@ -805,6 +836,7 @@ function main() {
     }
   }
 
+  validateNewsCatalogue(publicIndex, index, chainKeys, ids);
   validateDexRegistry(chainKeys);
   validateProposalsRegistry(chainKeys, chainTokenIdentifiers);
   validateApplicationConfig(chainKeys, chainTokenIdentifiers);

@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "feeds": [
+    {
+      "key": "medium-darksun",
+      "name": "DarkSun",
+      "type": "rss",
+      "publisherType": "darksun",
+      "feedUrl": "https://medium.com/feed/@darksun-finance",
+      "siteUrl": "https://medium.com/@darksun-finance",
+      "language": "en",
+      "enabled": true,
+      "chains": [],
+      "tokenIds": []
+    },
+    {
+      "key": "luncdaily",
+      "name": "LuncDaily",
+      "type": "rss",
+      "publisherType": "media",
+      "feedUrl": "https://luncdaily.com/feed/",
+      "siteUrl": "https://luncdaily.com/",
+      "logoUrl": "https://luncdaily.com/wp-content/uploads/2026/01/cropped-82E5F275-F41B-42EC-9961-3EF560300E5F-32x32.webp",
+      "language": "en",
+      "enabled": true,
+      "chains": [
+        "terra_classic"
+      ],
+      "tokenIds": []
+    }
+  ]
+}

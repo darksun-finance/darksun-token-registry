@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DarkSun News Feed Catalogue",
+  "type": "object",
+  "required": [
+    "version",
+    "feeds"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "feeds": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "key",
+          "name",
+          "type",
+          "publisherType",
+          "feedUrl",
+          "siteUrl",
+          "enabled",
+          "chains",
+          "tokenIds"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string",
+            "pattern": "^[a-z0-9-]+$"
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1
+          },
+          "type": {
+            "enum": [
+              "rss",
+              "atom"
+            ]
+          },
+          "publisherType": {
+            "enum": [
+              "darksun",
+              "media",
+              "project"
+            ]
+          },
+          "feedUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "siteUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "logoUrl": {
+            "type": "string",
+            "format": "uri"
+          },
+          "language": {
+            "type": "string"
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "chains": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          },
+          "tokenIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

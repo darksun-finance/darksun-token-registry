@@ -58,12 +58,9 @@
     "application": "registry/ui/application.json"
   },
   "payments": "registry/payments/plans.json",
-  "protocols": [
-    {
-      "chain": "terra_classic",
-      "file": "registry/protocols/terra-classic.json"
-    }
-  ],
+  "protocols": {
+    "terra_classic": "registry/protocols/terra-classic.json"
+  },
   "sources": [
     {
       "key": "coingecko",
@@ -94,7 +91,5 @@
       "tone": "yellow"
     }
   ],
-  "protocols": {
-    "terra_classic": "registry/protocols/terra-classic.json"
-  }
+  "news": "registry/news/feeds.json"
 }

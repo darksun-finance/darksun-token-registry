@@ -87,5 +87,6 @@
       "icon": "tokens/sources/validator-info.jpg",
       "tone": "yellow"
     }
-  ]
+  ],
+  "news": "registry/news/feeds.json"
 }
